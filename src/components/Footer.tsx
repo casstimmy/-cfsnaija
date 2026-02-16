@@ -32,17 +32,14 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-5">
-            <Link href="/" className="flex flex-col items-center">
+            <Link href="/" className="inline-flex items-center">
               <Image
                 src="/logo.png"
                 alt="Naija Steel Manufacturing Logo"
-                width={20}
-                height={20}
-                className="h-20 w-auto"
+                width={72}
+                height={72}
+                className="h-14 w-auto"
               />
-              <span className="text-white font-bold text-lg leading-tight">
-                Naija&nbsp;Steel
-              </span>
             </Link>
             <p className="text-sm leading-relaxed">
               Nigeria&rsquo;s trusted steel manufacturing company — precision

@@ -29,18 +29,15 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex flex-col items-center" aria-label="Home">
+          <Link href="/" className="flex items-center" aria-label="Home">
             <Image
               src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
-              width={20}
-              height={20}
-              className="h-20 w-auto"
+              width={80}
+              height={80}
+              className="h-14 w-auto"
               priority
             />
-            <span className="hidden md:block text-white font-bold text-xl leading-tight">
-              Naija&nbsp;Steel
-            </span>
           </Link>
 
           {/* Desktop nav */}
