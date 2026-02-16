@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center" aria-label="Home">
+          <Link href="/" className="flex flex-col items-center" aria-label="Home">
             <Image
               src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
