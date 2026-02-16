@@ -88,19 +88,24 @@ export default function ContactPage() {
                   Direct Contact Options
                 </p>
                 <div className="space-y-3">
-                  {PRIMARY_CONTACT_METHODS.map((method) => (
-                    <a
-                      key={method.label}
-                      href={method.href}
-                      className={`flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.color} text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
-                    >
-                      <method.icon className="h-5 w-5 shrink-0" />
-                      <div>
-                        <p className="text-sm font-bold">{method.label}</p>
-                        <p className="text-xs opacity-90">{method.value}</p>
-                      </div>
-                    </a>
-                  ))}
+                  {PRIMARY_CONTACT_METHODS.map((method) => {
+                    const isWhatsApp = method.label === "WhatsApp";
+                    return (
+                      <a
+                        key={method.label}
+                        href={method.href}
+                        className={`flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.color} text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 ${
+                          isWhatsApp ? "sm:hover:shadow-lg md:hover:shadow-lg lg:hover:shadow-lg animate-pulse-glow sm:animate-none" : ""
+                        }`}
+                      >
+                        <method.icon className={`h-5 w-5 shrink-0 ${ isWhatsApp ? "animate-bounce-subtle sm:animate-none" : "" }`} />
+                        <div>
+                          <p className="text-sm font-bold">{method.label}</p>
+                          <p className="text-xs opacity-90">{method.value}</p>
+                        </div>
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
 
