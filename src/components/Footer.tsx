@@ -31,16 +31,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3">
+          <div className="space-y-5">
+            <Link href="/" className="inline-flex items-center gap-2.5">
               <Image
                 src="/logo.png"
                 alt="Naija Steel Manufacturing Logo"
-                width={56}
-                height={56}
-                className="h-9 w-auto"
+                width={72}
+                height={72}
+                className="h-14 w-auto"
               />
-              <span className="text-white font-bold leading-tight">
+              <span className="text-white font-bold text-lg leading-tight">
                 Naija&nbsp;Steel
               </span>
             </Link>

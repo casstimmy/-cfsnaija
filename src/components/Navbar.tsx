@@ -27,18 +27,18 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3" aria-label="Home">
+          <Link href="/" className="flex items-center gap-2.5" aria-label="Home">
             <Image
               src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
-              width={60}
-              height={60}
-              className="h-10 w-auto"
+              width={80}
+              height={80}
+              className="h-14 w-auto"
               priority
             />
-            <span className="hidden sm:block text-white font-bold text-lg leading-tight">
+            <span className="hidden md:block text-white font-bold text-xl leading-tight">
               Naija&nbsp;Steel
             </span>
           </Link>
