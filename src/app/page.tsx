@@ -28,6 +28,7 @@ import type { LucideIcon } from "lucide-react";
 import Hero from "@/components/Hero";
 import SectionHeader from "@/components/SectionHeader";
 import ServiceCard from "@/components/ServiceCard";
+import PartnerCard from "@/components/PartnerCard";
 import { SERVICES } from "@/lib/services-data";
 
 /* ── Icon map for data-driven rendering ── */
@@ -82,10 +83,12 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     desc: "Project management, logistics support, and strategic coordination.",
+    image: "/partners/dee-divine.png",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
     desc: "Construction technology, facility management, and integrated building services.",
+    image: "/partners/invincible-tech.png",
   },
 ];
 
@@ -274,26 +277,7 @@ export default function HomePage() {
 
           <div className="grid sm:grid-cols-2 gap-8 mb-8 max-w-2xl mx-auto">
             {PARTNERS.map((p) => (
-              <Link
-                key={p.name}
-                href="/partners"
-                className="group flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/40 hover:shadow-lg transition-all bg-white"
-              >
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-navy/5 group-hover:bg-gold/10 transition-colors mb-4">
-                  <span className="text-2xl font-bold text-navy group-hover:text-gold">
-                    {p.name.split(' ')[0].charAt(0)}{p.name.split(' ')[1]?.charAt(0)}
-                  </span>
-                </div>
-                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">
-                  {p.name}
-                </h3>
-                <p className="text-sm text-steel leading-relaxed mb-4">
-                  {p.desc}
-                </p>
-                <div className="mt-auto flex items-center gap-1 text-xs font-semibold text-gold">
-                  Learn More <ArrowRight className="h-3 w-3" />
-                </div>
-              </Link>
+              <PartnerCard key={p.name} partner={p} />
             ))}
           </div>
 

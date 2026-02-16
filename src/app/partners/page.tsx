@@ -27,22 +27,6 @@ const PARTNERS = [
     experience: "12+ years",
   },
   {
-    name: "Engineering Services",
-    slug: "engineering-services",
-    logo: "/partners/engineering-services.png",
-    focus: "Structural Design & Consulting",
-    description:
-      "Technical engineering consulting partner providing structural design, site engineering, and construction supervision expertise.",
-    services: [
-      "Structural Design",
-      "Site Engineering",
-      "Construction Supervision",
-      "Quality Assurance",
-    ],
-    projects: "150+",
-    experience: "15+ years",
-  },
-  {
     name: "Invincible Tech & Integrated Services Ltd",
     slug: "invincible-tech",
     logo: "/partners/invincible-tech.png",
@@ -87,7 +71,7 @@ export default function PartnersPage() {
             subtitle="Together, we deliver end-to-end steel manufacturing and construction solutions of the highest caliber."
           />
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {PARTNERS.map((partner) => (
               <Link
                 key={partner.slug}
