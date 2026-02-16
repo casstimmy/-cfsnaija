@@ -8,8 +8,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
-          alt="Construction site with steel structure"
+          src="/projects/project-2.jpg"
+          alt="Steel structure manufacturing"
           fill
           className="object-cover"
           priority
@@ -22,22 +22,21 @@ export default function Hero() {
           {/* Tag */}
           <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-semibold text-gold tracking-wide uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            Integrated Engineering Solutions
+            Nigeria&rsquo;s Trusted Steel Manufacturer
           </div>
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] tracking-tight">
-            Smart. Sustainable.{" "}
-            <span className="text-gold">Integrated Engineering</span>{" "}
-            Solutions.
+            Precision{" "}
+            <span className="text-gold">Steel Manufacturing</span>{" "}
+            &amp; Construction
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-            From cold-formed steel construction to facility management,
-            Invinvincible Tech delivers end-to-end engineering services that
-            transform your vision into reality — on time, on budget, and built
-            to last.
+            Naija Steel Manufacturing Ltd delivers world-class cold-formed steel
+            fabrication, CFS construction, and integrated engineering solutions —
+            built with precision, delivered on time.
           </p>
 
           {/* CTA buttons */}

@@ -22,6 +22,7 @@ import {
   Medal,
   Clock,
   Puzzle,
+  Handshake,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import Hero from "@/components/Hero";
@@ -51,28 +52,60 @@ const ICON_MAP: Record<string, LucideIcon> = {
 const STRENGTHS: { icon: LucideIcon; title: string; text: string }[] = [
   {
     icon: Medal,
-    title: "Industry Expertise",
-    text: "Decades of combined experience in CFS construction and integrated engineering services.",
+    title: "Steel Expertise",
+    text: "Over a decade of combined experience in cold-formed steel manufacturing, fabrication, and construction.",
   },
   {
     icon: Leaf,
-    title: "Sustainable Construction",
-    text: "Eco-friendly materials and methods that reduce waste and minimize environmental impact.",
+    title: "Sustainable Building",
+    text: "Eco-friendly steel construction methods that reduce waste, lower carbon footprint, and promote recyclability.",
   },
   {
     icon: ShieldCheck,
-    title: "Quality Craftsmanship",
-    text: "Rigorous quality control at every stage ensures structures built to the highest standards.",
+    title: "Quality Assurance",
+    text: "Rigorous quality control at every stage — from raw material to finished structure — ensuring the highest standards.",
   },
   {
     icon: Clock,
     title: "On-Time Delivery",
-    text: "Efficient project management and modern fabrication technology guarantee timely completion.",
+    text: "Efficient manufacturing processes and modern fabrication technology guarantee timely project completion.",
   },
   {
     icon: Puzzle,
     title: "Integrated Solutions",
-    text: "One partner for design, fabrication, installation, and maintenance — seamless end-to-end service.",
+    text: "One partner for design, fabrication, installation, and maintenance — seamless end-to-end steel solutions.",
+  },
+];
+
+/* ── Partners ── */
+const PARTNERS = [
+  {
+    name: "Dee Divine Solutions",
+    desc: "Strategic partner for project management and logistics support.",
+  },
+  {
+    name: "Engineering Services",
+    desc: "Technical engineering consulting and structural design expertise.",
+  },
+  {
+    name: "Invincible Tech & Integrated Services Ltd",
+    desc: "Construction technology, facility management, and integrated building services.",
+  },
+];
+
+/* ── Executive Team ── */
+const TEAM = [
+  {
+    name: "Oyeleke Daniel",
+    role: "CEO",
+    image: "/team/ceo-daniel.jpg",
+    bio: "With over 10 years of experience in steel manufacturing, Daniel has successfully led projects that increased operational efficiency and market share.",
+  },
+  {
+    name: "Emmanuel C. Bernard",
+    role: "COO",
+    image: "/team/coo-bernard.jpg",
+    bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
   },
 ];
 
@@ -90,8 +123,8 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
-                  alt="Modern construction site with steel framework"
+                  src="/projects/project-3.jpg"
+                  alt="Naija Steel construction site with steel framework"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -99,7 +132,7 @@ export default function HomePage() {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-navy/40 flex items-end p-6">
                   <p className="text-white text-lg font-semibold drop-shadow-lg">
-                    Building the Future, Today
+                    Building Nigeria&rsquo;s Future in Steel
                   </p>
                 </div>
               </div>
@@ -111,16 +144,15 @@ export default function HomePage() {
             <div className="space-y-6">
               <SectionHeader
                 tag="Who We Are"
-                title="Engineering Excellence, Integrated Delivery"
+                title="Nigeria's Trusted Steel Manufacturer"
                 centered={false}
               />
               <p className="text-steel leading-relaxed">
-                Invinvincible Tech And Integrated Services Ltd is a
-                forward-thinking engineering and construction company
-                specializing in cold-formed steel solutions, facility
-                management, and a comprehensive suite of building services. We
-                combine modern technology with hands-on craftsmanship to deliver
-                projects that stand the test of time.
+                Naija Steel Manufacturing Ltd is a leading steel manufacturing
+                and construction company specializing in cold-formed steel (CFS)
+                solutions. From precision fabrication to full-scale building
+                construction, we deliver projects that stand the test of time —
+                combining modern technology with expert craftsmanship.
               </p>
               <Link
                 href="/about"
@@ -139,7 +171,7 @@ export default function HomePage() {
           <SectionHeader
             tag="What We Do"
             title="Our Services"
-            subtitle="Comprehensive engineering and construction services delivered with precision, quality, and sustainability."
+            subtitle="Comprehensive steel manufacturing, fabrication, and construction services delivered with precision and quality."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -164,13 +196,57 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════ WHY CHOOSE US ═══════ */}
+      {/* ═══════ EXECUTIVE TEAM ═══════ */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
+            tag="Leadership"
+            title="Executive Team"
+            subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
+          />
+
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {TEAM.map((member) => (
+              <div
+                key={member.name}
+                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
+                      {member.role}
+                    </p>
+                    <h3 className="text-xl font-bold text-white">
+                      {member.name}
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-sm text-steel leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ WHY CHOOSE US ═══════ */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
             tag="Our Advantage"
-            title="Why Choose Invinvincible Tech"
-            subtitle="We bring together expertise, technology, and commitment to deliver lasting value on every project."
+            title="Why Choose Naija Steel"
+            subtitle="We bring together expertise, precision manufacturing, and commitment to deliver lasting value on every project."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -192,6 +268,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══════ PARTNERS ═══════ */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
+            tag="Collaboration"
+            title="Our Partners"
+            subtitle="We work alongside trusted partners to deliver comprehensive steel and engineering solutions."
+          />
+
+          <div className="grid sm:grid-cols-3 gap-8">
+            {PARTNERS.map((p) => (
+              <div
+                key={p.name}
+                className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy/5 text-navy mb-4">
+                  <Handshake className="h-7 w-7" />
+                </div>
+                <h3 className="font-bold text-navy mb-2">{p.name}</h3>
+                <p className="text-sm text-steel leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ CTA BANNER ═══════ */}
       <section className="relative isolate overflow-hidden bg-navy">
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy to-navy-light -z-10" />
@@ -199,11 +301,12 @@ export default function HomePage() {
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Let&rsquo;s Build Your Vision
+            Let&rsquo;s Build Your Vision in Steel
           </h2>
           <p className="text-lg text-gray-300 max-w-xl mx-auto">
-            Partner with us to transform your construction and engineering
-            projects. Get in touch today for a free consultation and quote.
+            Partner with Naija Steel Manufacturing Ltd to transform your
+            construction and engineering projects. Get in touch today for a
+            free consultation and quote.
           </p>
           <Link
             href="/contact"

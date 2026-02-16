@@ -24,7 +24,7 @@ import { SERVICES } from "@/lib/services-data";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore our full range of engineering and construction services — from CFS building construction and aluminum fabrication to facility management.",
+    "Explore Naija Steel Manufacturing's full range of services — steel fabrication, CFS construction, structural steel, and integrated engineering solutions.",
 };
 
 const ICON_MAP: Record<string, LucideIcon> = {
@@ -55,8 +55,8 @@ export default function ServicesPage() {
             Our Services
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Comprehensive engineering and construction services, delivered with
-            precision and built for the future.
+            Comprehensive steel manufacturing, fabrication, and construction
+            services — delivered with precision and built to last.
           </p>
         </div>
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />

@@ -8,10 +8,16 @@ export interface ServiceDefinition {
 
 export const SERVICES: ServiceDefinition[] = [
   {
-    icon: "Building2",
-    title: "CFS Smart Building Construction",
+    icon: "Factory",
+    title: "Steel Manufacturing & Fabrication",
     description:
-      "Sustainable, eco-friendly building construction using state-of-the-art cold-formed steel technology for residential and commercial projects.",
+      "Advanced cold-formed steel manufacturing using automated roll-forming machines, delivering structural components with unmatched precision and consistency.",
+  },
+  {
+    icon: "Building2",
+    title: "CFS Building Construction",
+    description:
+      "Sustainable, eco-friendly building construction using state-of-the-art cold-formed steel technology for residential, commercial, and industrial projects.",
   },
   {
     icon: "PanelTop",
@@ -20,16 +26,22 @@ export const SERVICES: ServiceDefinition[] = [
       "Precision aluminum and glass fabrication for facades, windows, doors, partitions, and architectural elements.",
   },
   {
+    icon: "Layers",
+    title: "Structural Steel Solutions",
+    description:
+      "Custom structural steel design, fabrication, and erection for buildings, warehouses, and industrial facilities of all scales.",
+  },
+  {
+    icon: "HardHat",
+    title: "Site Engineering & Supervision",
+    description:
+      "On-site engineering oversight and project supervision to ensure quality standards and timeline adherence on every build.",
+  },
+  {
     icon: "Wrench",
     title: "Plumbing & Electrical",
     description:
       "Complete plumbing and electrical installations, maintenance, and upgrades for commercial and residential properties.",
-  },
-  {
-    icon: "Factory",
-    title: "Cold Form Steel (CFS) Fabrication",
-    description:
-      "Advanced CFS fabrication using automated roll-forming machines, delivering structural components with unmatched precision.",
   },
   {
     icon: "Hammer",
@@ -39,15 +51,9 @@ export const SERVICES: ServiceDefinition[] = [
   },
   {
     icon: "Paintbrush",
-    title: "Interior & Exterior Decor",
+    title: "Interior & Exterior Finishing",
     description:
       "Professional interior and exterior finishing that blends aesthetics with durability for lasting impressions.",
-  },
-  {
-    icon: "HardHat",
-    title: "Site Engineering & Supervision",
-    description:
-      "On-site engineering oversight and project supervision to ensure quality standards and timeline adherence.",
   },
   {
     icon: "LayoutGrid",
@@ -56,22 +62,10 @@ export const SERVICES: ServiceDefinition[] = [
       "Professional gypsum board installation for walls and ceilings, delivering smooth finishes and sound insulation.",
   },
   {
-    icon: "Layers",
-    title: "Cement Board Installation",
-    description:
-      "High-performance cement board systems for moisture-resistant and fire-rated wall and ceiling assemblies.",
-  },
-  {
     icon: "Columns3",
     title: "Drywall Installation",
     description:
       "Expert drywall installation, taping, and finishing for commercial and residential interiors with flawless results.",
-  },
-  {
-    icon: "Plug",
-    title: "Home Appliances Installation",
-    description:
-      "Professional installation of home appliances including HVAC systems, water heaters, and kitchen equipment.",
   },
   {
     icon: "Grid3x3",
@@ -84,6 +78,12 @@ export const SERVICES: ServiceDefinition[] = [
     title: "Facility Management & Maintenance",
     description:
       "Comprehensive facility management covering preventive maintenance, repairs, and operational support services.",
+  },
+  {
+    icon: "Plug",
+    title: "Home Appliances Installation",
+    description:
+      "Professional installation of home appliances including HVAC systems, water heaters, and kitchen equipment.",
   },
   {
     icon: "Cog",

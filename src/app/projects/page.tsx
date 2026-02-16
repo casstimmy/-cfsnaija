@@ -7,7 +7,7 @@ import SectionHeader from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Explore our portfolio of completed and ongoing construction and engineering projects.",
+    "Explore Naija Steel Manufacturing's portfolio of steel construction and fabrication projects across Nigeria.",
 };
 
 interface Project {
@@ -20,68 +20,52 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    title: "Residential CFS Housing Estate",
+    title: "Residential CFS Steel Framed Building",
     category: "CFS Construction",
     description:
-      "A 20-unit residential housing estate built entirely with cold-formed steel technology, featuring modern finishes and energy-efficient design.",
+      "A precision-engineered residential building constructed entirely with cold-formed steel framing, featuring modern landscaping and sustainable design elements.",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+    image: "/projects/project-1.jpg",
   },
   {
-    title: "Commercial Office Complex",
-    category: "Aluminum & Glass",
+    title: "Arched Steel Structure Fabrication",
+    category: "Steel Fabrication",
     description:
-      "Full aluminum and glass curtain-wall fabrication and installation for a 5-story commercial office building in Lagos.",
+      "Large-scale arched steel structural fabrication showcasing our advanced manufacturing capabilities for complex architectural steel designs.",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    image: "/projects/project-2.jpg",
+  },
+  {
+    title: "Multi-Building Commercial Complex",
+    category: "Commercial Construction",
+    description:
+      "Full-scale commercial complex construction using cold-formed steel technology, featuring multiple multi-story buildings with CFS framing and panel cladding.",
+    status: "Ongoing",
+    image: "/projects/project-3.jpg",
   },
   {
     title: "Industrial Warehouse Facility",
-    category: "CFS Fabrication",
+    category: "Industrial Steel",
     description:
-      "Design, fabrication, and erection of a 2,000 sqm industrial warehouse using cold-formed steel structural members.",
+      "Design, fabrication, and erection of a large industrial warehouse using cold-formed steel structural members for maximum durability.",
     status: "Completed",
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80",
+    image: "/projects/project-2.jpg",
   },
   {
-    title: "Hotel Renovation & Remodeling",
-    category: "Facility Remodeling",
-    description:
-      "Complete interior remodeling of a 60-room hotel including drywall, suspended ceilings, plumbing, and electrical upgrades.",
-    status: "Completed",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Smart School Complex",
+    title: "Residential Housing Estate",
     category: "CFS Construction",
     description:
-      "Multi-block smart school facility with CFS structure, gypsum board partitions, and modern suspended ceiling systems.",
+      "A multi-unit residential housing estate built with cold-formed steel, featuring modern finishes and energy-efficient design throughout.",
     status: "Ongoing",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+    image: "/projects/project-1.jpg",
   },
   {
-    title: "Corporate Headquarters Fit-Out",
-    category: "Interior Decor",
+    title: "Steel Roof Truss Manufacturing",
+    category: "Steel Manufacturing",
     description:
-      "Premium interior fit-out for a corporate headquarters featuring custom joinery, glass partitions, and decorative ceilings.",
-    status: "Ongoing",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Healthcare Clinic Build-Out",
-    category: "Integrated Services",
-    description:
-      "Turn-key clinic construction including structural work, MEP systems, drywall, and medical equipment installation.",
-    status: "Upcoming",
-    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    title: "Mixed-Use Development",
-    category: "CFS Construction",
-    description:
-      "A mixed-use residential and retail development utilizing sustainable CFS framing and modern facade systems.",
-    status: "Upcoming",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      "Custom steel roof truss manufacturing and installation for residential and commercial buildings across Nigeria.",
+    status: "Completed",
+    image: "/projects/project-3.jpg",
   },
 ];
 
@@ -102,8 +86,8 @@ export default function ProjectsPage() {
             Our Projects
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            A showcase of the projects that define our commitment to quality and
-            innovation.
+            A showcase of the steel manufacturing and construction projects that
+            define our commitment to quality and precision.
           </p>
         </div>
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
@@ -115,7 +99,7 @@ export default function ProjectsPage() {
           <SectionHeader
             tag="Portfolio"
             title="Featured Work"
-            subtitle="From residential estates to commercial complexes, every project reflects our dedication to engineering excellence."
+            subtitle="From residential steel-framed buildings to large-scale commercial complexes, every project reflects our dedication to steel manufacturing excellence."
           />
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -159,11 +143,6 @@ export default function ProjectsPage() {
               </article>
             ))}
           </div>
-
-          {/* Note */}
-          <p className="text-center text-sm text-steel">
-            Project images and detailed case studies will be added as they become available.
-          </p>
         </div>
       </section>
 
@@ -174,8 +153,8 @@ export default function ProjectsPage() {
             Have a Project in Mind?
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Share your requirements and let our team craft a solution that fits
-            your goals, timeline, and budget.
+            Share your requirements and let our team craft a steel solution that
+            fits your goals, timeline, and budget.
           </p>
           <Link
             href="/contact"

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Target,
   Eye,
@@ -7,6 +8,7 @@ import {
   Users,
   ShieldCheck,
   ArrowRight,
+  Handshake,
 } from "lucide-react";
 import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
@@ -14,7 +16,7 @@ import SectionHeader from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Invinvincible Tech And Integrated Services Ltd — our vision, mission, values, and approach to smart, sustainable engineering.",
+    "Learn about Naija Steel Manufacturing Ltd — our vision, mission, values, executive team, and approach to precision steel manufacturing.",
 };
 
 const CORE_VALUES: { icon: typeof Target; title: string; text: string }[] = [
@@ -26,12 +28,12 @@ const CORE_VALUES: { icon: typeof Target; title: string; text: string }[] = [
   {
     icon: Lightbulb,
     title: "Innovation",
-    text: "Embracing modern technology and creative problem-solving to push the boundaries of construction.",
+    text: "Embracing modern steel technology and creative problem-solving to push the boundaries of manufacturing.",
   },
   {
     icon: Heart,
     title: "Excellence",
-    text: "An unwavering commitment to the highest standards of workmanship and service delivery.",
+    text: "An unwavering commitment to the highest standards of workmanship and product quality.",
   },
   {
     icon: Users,
@@ -41,12 +43,42 @@ const CORE_VALUES: { icon: typeof Target; title: string; text: string }[] = [
   {
     icon: Target,
     title: "Sustainability",
-    text: "Prioritizing eco-friendly materials and processes that minimize environmental impact.",
+    text: "Prioritizing eco-friendly materials and recyclable steel processes that minimize environmental impact.",
   },
   {
     icon: Eye,
     title: "Accountability",
     text: "Taking ownership of outcomes and delivering on our promises — every project, every time.",
+  },
+];
+
+const TEAM = [
+  {
+    name: "Oyeleke Daniel",
+    role: "Chief Executive Officer (CEO)",
+    image: "/team/ceo-daniel.jpg",
+    bio: "With over 10 years of experience in steel manufacturing, Daniel has successfully led projects that increased operational efficiency and market share.",
+  },
+  {
+    name: "Emmanuel C. Bernard",
+    role: "Chief Operating Officer (COO)",
+    image: "/team/coo-bernard.jpg",
+    bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
+  },
+];
+
+const PARTNERS = [
+  {
+    name: "Dee Divine Solutions",
+    desc: "Strategic partner for project management and logistics support across Nigeria.",
+  },
+  {
+    name: "Engineering Services",
+    desc: "Technical engineering consulting and structural design expertise for complex projects.",
+  },
+  {
+    name: "Invincible Tech & Integrated Services Ltd",
+    desc: "Construction technology, facility management, and integrated building services partner.",
   },
 ];
 
@@ -61,7 +93,7 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Engineering excellence with an integrated approach to modern construction.
+            Precision steel manufacturing with an integrated approach to modern construction.
           </p>
         </div>
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
@@ -77,37 +109,82 @@ export default function AboutPage() {
             />
             <div className="text-steel leading-relaxed space-y-4 text-left">
               <p>
-                Invinvincible Tech And Integrated Services Ltd is a
-                multidisciplinary engineering and construction firm dedicated to
-                delivering smart, sustainable, and integrated building solutions.
-                Founded with a vision to modernize the construction landscape,
-                we specialize in cold-formed steel (CFS) building technology,
-                facility management, and a comprehensive range of engineering
-                services.
+                Naija Steel Manufacturing Ltd is a leading steel manufacturing
+                and construction company dedicated to delivering precision-engineered
+                steel solutions for Nigeria and beyond. Founded with a vision to
+                modernize the construction landscape, we specialize in cold-formed
+                steel (CFS) fabrication, structural steel manufacturing, and a
+                comprehensive range of construction and engineering services.
               </p>
               <p>
                 Our team combines deep industry expertise with cutting-edge
-                technology to serve clients across residential, commercial, and
-                industrial sectors. We take pride in our ability to handle
-                projects from concept to completion — ensuring quality,
+                manufacturing technology to serve clients across residential,
+                commercial, and industrial sectors. We take pride in our ability
+                to handle projects from concept to completion — ensuring quality,
                 efficiency, and value at every stage.
               </p>
               <p>
-                Headquartered in Nigeria, we are committed to raising the
-                standard of construction through innovation, professionalism,
-                and a relentless focus on client satisfaction.
+                Headquartered in Nigeria, we work alongside our trusted partners —
+                Dee Divine Solutions, Engineering Services, and Invincible Tech
+                &amp; Integrated Services Ltd — to raise the standard of steel
+                construction through innovation, professionalism, and a relentless
+                focus on client satisfaction.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ VISION & MISSION ═══════ */}
+      {/* ═══════ EXECUTIVE TEAM ═══════ */}
       <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
+            tag="Leadership"
+            title="Executive Team"
+            subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
+          />
+
+          <div className="grid sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            {TEAM.map((member) => (
+              <div
+                key={member.name}
+                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+              >
+                <div className="relative aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
+                      {member.role}
+                    </p>
+                    <h3 className="text-xl font-bold text-white">
+                      {member.name}
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-sm text-steel leading-relaxed">
+                    {member.bio}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ VISION & MISSION ═══════ */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
             {/* Vision */}
-            <div className="bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
+            <div className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/10 text-gold">
                   <Eye className="h-5 w-5" />
@@ -115,15 +192,15 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-navy">Our Vision</h3>
               </div>
               <p className="text-steel leading-relaxed">
-                To be the leading integrated engineering and construction
-                services company in Africa, recognized for innovation,
-                sustainability, and excellence in delivering world-class
-                infrastructure and building solutions.
+                To be the leading steel manufacturing and construction company
+                in Africa, recognized for innovation, precision engineering,
+                and excellence in delivering world-class steel infrastructure
+                and building solutions.
               </p>
             </div>
 
             {/* Mission */}
-            <div className="bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
+            <div className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/10 text-gold">
                   <Target className="h-5 w-5" />
@@ -131,11 +208,11 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-navy">Our Mission</h3>
               </div>
               <p className="text-steel leading-relaxed">
-                To deliver smart, sustainable, and cost-effective engineering
-                solutions through advanced cold-formed steel technology,
-                skilled craftsmanship, and a commitment to client satisfaction —
-                transforming the way structures are built, maintained, and
-                managed.
+                To deliver precision-engineered, sustainable, and cost-effective
+                steel manufacturing solutions through advanced cold-formed steel
+                technology, skilled craftsmanship, and a commitment to client
+                satisfaction — transforming the way structures are built across
+                Nigeria.
               </p>
             </div>
           </div>
@@ -143,7 +220,7 @@ export default function AboutPage() {
       </section>
 
       {/* ═══════ CORE VALUES ═══════ */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
             tag="What Drives Us"
@@ -155,13 +232,39 @@ export default function AboutPage() {
             {CORE_VALUES.map((v) => (
               <div
                 key={v.title}
-                className="group p-6 rounded-xl border border-gray-100 hover:border-gold/30 hover:shadow-lg transition-all"
+                className="group p-6 rounded-xl border border-gray-100 bg-white hover:border-gold/30 hover:shadow-lg transition-all"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-navy/5 text-navy group-hover:bg-gold/10 group-hover:text-gold transition-colors mb-4">
                   <v.icon className="h-5 w-5" />
                 </div>
                 <h3 className="font-bold text-navy mb-2">{v.title}</h3>
                 <p className="text-sm text-steel leading-relaxed">{v.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ OUR PARTNERS ═══════ */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
+            tag="Collaboration"
+            title="Our Partners"
+            subtitle="We work alongside trusted partners to deliver comprehensive steel and engineering solutions."
+          />
+
+          <div className="grid sm:grid-cols-3 gap-8">
+            {PARTNERS.map((p) => (
+              <div
+                key={p.name}
+                className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+              >
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy/5 text-navy mb-4">
+                  <Handshake className="h-7 w-7" />
+                </div>
+                <h3 className="font-bold text-navy mb-2">{p.name}</h3>
+                <p className="text-sm text-steel leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -188,17 +291,17 @@ export default function AboutPage() {
                 {
                   step: "02",
                   title: "Design & Engineer",
-                  text: "Our engineering team creates precise designs using modern tools, ensuring structural integrity and efficiency.",
+                  text: "Our engineering team creates precise designs using modern tools, ensuring structural integrity and manufacturing efficiency.",
                 },
                 {
                   step: "03",
                   title: "Fabricate & Build",
-                  text: "State-of-the-art fabrication and skilled installation teams bring your project to life with meticulous quality control.",
+                  text: "State-of-the-art steel fabrication and skilled installation teams bring your project to life with meticulous quality control.",
                 },
                 {
                   step: "04",
-                  title: "Deliver & Maintain",
-                  text: "We hand over on schedule and offer ongoing facility management to protect your investment long-term.",
+                  title: "Deliver & Support",
+                  text: "We hand over on schedule and offer ongoing support and maintenance to protect your investment long-term.",
                 },
               ].map((s) => (
                 <div
@@ -224,8 +327,8 @@ export default function AboutPage() {
             Ready to Work With Us?
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Let&rsquo;s discuss your next project and how our integrated
-            approach can deliver exceptional results.
+            Let&rsquo;s discuss your next project and how our precision steel
+            manufacturing can deliver exceptional results.
           </p>
           <Link
             href="/contact"

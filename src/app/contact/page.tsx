@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Invinvincible Tech And Integrated Services Ltd. Request a quote, ask a question, or schedule a consultation.",
+    "Get in touch with Naija Steel Manufacturing Ltd. Request a quote, ask a question, or schedule a consultation.",
 };
 
 const PRIMARY_CONTACT_METHODS = [
@@ -29,7 +29,7 @@ const PRIMARY_CONTACT_METHODS = [
     icon: MessageCircle,
     label: "WhatsApp",
     value: "Message on WhatsApp",
-    href: "https://wa.me/2348028687687?text=Hello%20Invinvincible%20Tech,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
+    href: "https://wa.me/2348028687687?text=Hello%20Naija%20Steel%20Manufacturing,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
     color: "from-green-500 to-green-600",
   },
 ];
@@ -126,13 +126,12 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Company name */}
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm font-bold text-navy">
-                  Invinvincible Tech And Integrated Services Ltd
+                  Naija Steel Manufacturing Ltd
                 </p>
                 <p className="text-xs text-steel mt-1">
-                  Smart. Sustainable. Integrated Engineering Solutions.
+                  Precision Steel. Built to Last.
                 </p>
               </div>
             </div>

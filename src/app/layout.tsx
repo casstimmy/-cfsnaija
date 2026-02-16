@@ -12,28 +12,29 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Invinvincible Tech & Integrated Services Ltd",
-    template: "%s | Invinvincible Tech",
+    default: "Naija Steel Manufacturing Ltd",
+    template: "%s | Naija Steel",
   },
   description:
-    "Smart, sustainable, and integrated engineering solutions. CFS construction, aluminum fabrication, facility management, and more.",
+    "Nigeria's trusted steel manufacturing company. Cold-formed steel fabrication, CFS construction, structural steel solutions, and integrated engineering services.",
   keywords: [
-    "CFS construction",
+    "steel manufacturing",
     "cold-formed steel",
-    "aluminum fabrication",
-    "facility management",
-    "engineering services",
-    "Nigeria construction",
-    "integrated services",
+    "CFS construction",
+    "steel fabrication",
+    "structural steel",
+    "Nigeria steel",
+    "steel building",
+    "Naija Steel",
   ],
-  authors: [{ name: "Invinvincible Tech & Integrated Services Ltd" }],
+  authors: [{ name: "Naija Steel Manufacturing Ltd" }],
   openGraph: {
-    title: "Invinvincible Tech & Integrated Services Ltd",
+    title: "Naija Steel Manufacturing Ltd",
     description:
-      "Smart, sustainable, and integrated engineering solutions for modern construction.",
+      "Nigeria's trusted steel manufacturing company — precision steel fabrication and CFS construction.",
     type: "website",
     locale: "en_NG",
-    siteName: "Invinvincible Tech",
+    siteName: "Naija Steel",
   },
   robots: { index: true, follow: true },
 };

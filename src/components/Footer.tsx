@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Handshake } from "lucide-react";
 
 const QUICK_LINKS = [
   { label: "Home", href: "/" },
@@ -11,11 +11,17 @@ const QUICK_LINKS = [
 ];
 
 const SERVICE_LINKS = [
+  "Steel Manufacturing & Fabrication",
   "CFS Building Construction",
   "Aluminum & Glass Fabrication",
-  "Facility Management",
-  "Site Engineering",
-  "Interior & Exterior Decor",
+  "Structural Steel Solutions",
+  "Site Engineering & Supervision",
+];
+
+const PARTNERS = [
+  "Dee Divine Solutions",
+  "Engineering Services",
+  "Invincible Tech & Integrated Services Ltd",
 ];
 
 export default function Footer() {
@@ -29,19 +35,31 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/logo.jpeg"
-                alt="Invinvincible Tech Logo"
+                alt="Naija Steel Manufacturing Logo"
                 width={36}
                 height={36}
                 className="h-9 w-auto"
               />
               <span className="text-white font-bold leading-tight">
-                Invinvincible&nbsp;Tech
+                Naija&nbsp;Steel
               </span>
             </Link>
             <p className="text-sm leading-relaxed">
-              Smart, sustainable, and integrated engineering solutions for
-              modern construction and facility management.
+              Nigeria&rsquo;s trusted steel manufacturing company — precision
+              fabrication, CFS construction, and integrated engineering
+              solutions.
             </p>
+            {/* Partners */}
+            <div className="pt-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-2 flex items-center gap-1.5">
+                <Handshake className="h-3.5 w-3.5" /> Our Partners
+              </p>
+              <ul className="space-y-1">
+                {PARTNERS.map((p) => (
+                  <li key={p} className="text-xs text-gray-500">{p}</li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Quick links */}
@@ -116,11 +134,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p>
-            &copy; 2026 Invinvincible Tech And Integrated Services Ltd. All
-            Rights Reserved.
+            &copy; 2026 Naija Steel Manufacturing Ltd. All Rights Reserved.
           </p>
           <p className="text-gray-500">
-            Engineered with precision&nbsp;&bull;&nbsp;Built for the future
+            Precision steel&nbsp;&bull;&nbsp;Built to last
           </p>
         </div>
       </div>

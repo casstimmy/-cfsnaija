@@ -31,14 +31,14 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-3" aria-label="Home">
             <Image
               src="/logo.jpeg"
-              alt="Invinvincible Tech Logo"
+              alt="Naija Steel Manufacturing Logo"
               width={40}
               height={40}
               className="h-10 w-auto"
               priority
             />
             <span className="hidden sm:block text-white font-bold text-lg leading-tight">
-              Invinvincible&nbsp;Tech
+              Naija&nbsp;Steel
             </span>
           </Link>
 
