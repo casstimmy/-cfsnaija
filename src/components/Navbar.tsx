@@ -29,12 +29,12 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5" aria-label="Home">
+          <Link href="/" className="flex items-center gap-1.5" aria-label="Home">
             <Image
               src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
-              width={80}
-              height={80}
+              width={120}
+              height={120}
               className="h-14 w-auto"
               priority
             />
