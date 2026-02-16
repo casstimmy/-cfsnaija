@@ -21,7 +21,6 @@ const SERVICE_LINKS = [
 
 const PARTNERS = [
   "Dee Divine Solutions",
-  "Engineering Services",
   "Invincible Tech & Integrated Services Ltd",
 ];
 

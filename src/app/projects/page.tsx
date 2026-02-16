@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin, Users } from "lucide-react";
+import { ArrowRight, MapPin, Users, ArrowLeft } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 interface Project {
   title: string;
+  id?: string;
   category: string;
   location: string;
   description: string;
@@ -25,6 +26,7 @@ const PROJECTS: Project[] = [
   // CFS Construction Projects
   {
     title: "Urban Residential Complex - Lekki, Lagos",
+    id: "urban-residential-lekki",
     category: "CFS Building Construction",
     location: "Lagos, Nigeria",
     description: "50-unit high-rise residential complex with CFS framing, energy-efficient design, and modern amenities.",
@@ -35,6 +37,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Commercial Office Development - VI, Lagos",
+    id: "commercial-office-vi",
     category: "CFS Building Construction",
     location: "Lagos, Nigeria",
     description: "8-story commercial building with complete CFS structural framing and integrated building systems.",
@@ -45,6 +48,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Mixed-Use Development - Ikoyi",
+    id: "mixed-use-ikoyi",
     category: "CFS Building Construction",
     location: "Lagos, Nigeria",
     description: "Integrated residential-retail-office development utilizing sustainable CFS construction methods.",
@@ -55,6 +59,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Corporate Headquarters - Abuja",
+    id: "corporate-headquarters-abuja",
     category: "CFS Building Construction",
     location: "Abuja, Nigeria",
     description: "Premium corporate headquarters featuring CFS framing, advanced automation, and executive facilities.",
@@ -67,6 +72,7 @@ const PROJECTS: Project[] = [
   // Steel Fabrication Projects
   {
     title: "Industrial Steel Framework - Port Harcourt",
+    id: "industrial-steel-port-harcourt",
     category: "Steel Fabrication & Manufacturing",
     location: "Port Harcourt, Nigeria",
     description: "Large-scale industrial structure with precision-fabricated steel members and complex geometry.",
@@ -77,6 +83,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Warehouse Complex Fabrication",
+    id: "warehouse-complex-fabrication",
     category: "Steel Fabrication & Manufacturing",
     location: "Lagos, Nigeria",
     description: "Multiple connected warehouses with optimized steel framing for logistics operations.",
@@ -87,6 +94,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Heavy-Duty Steel Structure - Kaduna",
+    id: "heavy-duty-steel-kaduna",
     category: "Steel Fabrication & Manufacturing",
     location: "Kaduna, Nigeria",
     description: "Custom-designed heavy industrial steel structure with advanced load-bearing capabilities.",
@@ -97,6 +105,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Arched Structural System",
+    id: "arched-structural-system",
     category: "Steel Fabrication & Manufacturing",
     location: "Lagos, Nigeria",
     description: "Complex arched steel framework showcasing advanced fabrication and precision engineering.",
@@ -109,6 +118,7 @@ const PROJECTS: Project[] = [
   // Facility & Renovation Projects
   {
     title: "Hotel Renovation & Modernization",
+    id: "hotel-renovation",
     category: "Facility Renovation & Upgrade",
     location: "Lagos, Nigeria",
     description: "Complete 60-room hotel renovation including structural upgrades and integrated technology systems.",
@@ -119,6 +129,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Educational Institution Remodeling",
+    id: "educational-institution-remodeling",
     category: "Facility Renovation & Upgrade",
     location: "Lagos, Nigeria",
     description: "Multi-block educational facility renovated with modern classrooms, labs, and administrative spaces.",
@@ -129,6 +140,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Healthcare Facility Upgrade",
+    id: "healthcare-facility-upgrade",
     category: "Facility Renovation & Upgrade",
     location: "Abuja, Nigeria",
     description: "Hospital facility expansion with CFS framing and advanced medical facility infrastructure.",
@@ -141,6 +153,7 @@ const PROJECTS: Project[] = [
   // Specialty Projects
   {
     title: "Agricultural Processing Center",
+    id: "agricultural-processing-center",
     category: "Specialty Structures",
     location: "Ogun State, Nigeria",
     description: "Agricultural facility with climate-controlled storage and processing areas.",
@@ -151,6 +164,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Data Center Infrastructure",
+    id: "data-center-infrastructure",
     category: "Specialty Structures",
     location: "Lagos, Nigeria",
     description: "Secure data center with advanced environmental controls and redundant systems.",
@@ -161,6 +175,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Manufacturing Facility - Phase 2",
+    id: "manufacturing-facility-phase-2",
     category: "Specialty Structures",
     location: "Lagos, Nigeria",
     description: "Manufacturing facility with production floors, quality control labs, and administrative offices.",
@@ -171,6 +186,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Retail Commerce Center",
+    id: "retail-commerce-center",
     category: "Specialty Structures",
     location: "Lekki, Lagos",
     description: "Modern retail and entertainment center with integrated parking and traffic flow systems.",
@@ -189,9 +205,36 @@ const STATUS_STYLES: Record<Project["status"], string> = {
   Upcoming: "bg-navy/10 text-navy",
 };
 
+// Alternative image variants for projects
+const PROJECT_IMAGES = [
+  ["/projects/project-1.jpg", "/projects/project-2.jpg", "/projects/project-3.jpg"],
+  ["/projects/project-3.jpg", "/projects/project-1.jpg", "/projects/project-2.jpg"],
+  ["/projects/project-2.jpg", "/projects/project-3.jpg", "/projects/project-1.jpg"],
+  ["/projects/project-1.jpg", "/projects/project-3.jpg", "/projects/project-2.jpg"],
+];
+
+function getProjectImage(project: Project): string {
+  // Create variation in image display
+  const imageIndex = PROJECTS.indexOf(project) % 3;
+  return project.image.replace(/project-\d+\.jpg/, `project-${imageIndex + 1}.jpg`);
+}
+
 export default function ProjectsPage() {
   return (
     <>
+      {/* ═══════ BACK BUTTON ═══════ */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gold transition-colors group"
+          >
+            <ArrowRight className="h-4 w-4 rotate-180 group-hover:-translate-x-1 transition-transform" />
+            Back to Home
+          </Link>
+        </div>
+      </section>
+
       {/* ═══════ PAGE HEADER ═══════ */}
       <section className="relative bg-navy py-20 sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark to-navy-light -z-10" />
@@ -240,60 +283,62 @@ export default function ProjectsPage() {
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
                   {categoryProjects.map((project) => (
-                    <article
+                    <Link
                       key={project.title}
-                      className="group flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+                      href={`/projects/${project.id}`}
                     >
-                      {/* Thumbnail */}
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 640px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-navy/20" />
-                        {/* Status badge */}
-                        <span
-                          className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm ${
-                            STATUS_STYLES[project.status]
-                          }`}
-                        >
-                          {project.status}
-                        </span>
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex flex-col flex-1 p-6 space-y-4">
-                        <div>
-                          <h3 className="text-lg font-bold text-navy group-hover:text-gold transition-colors mb-2">
-                            {project.title}
-                          </h3>
-                          <p className="text-sm text-steel leading-relaxed">
-                            {project.description}
-                          </p>
+                      <article className="group flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300 h-full cursor-pointer">
+                        {/* Thumbnail */}
+                        <div className="relative aspect-[16/10] overflow-hidden">
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                            sizes="(max-width: 640px) 100vw, 50vw"
+                          />
+                          <div className="absolute inset-0 bg-navy/20" />
+                          {/* Status badge */}
+                          <span
+                            className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm ${
+                              STATUS_STYLES[project.status]
+                            }`}
+                          >
+                            {project.status}
+                          </span>
                         </div>
 
-                        {/* Project details */}
-                        <div className="space-y-2 py-4 border-y border-gray-100">
-                          <div className="flex items-center gap-2 text-sm text-steel">
-                            <MapPin className="h-4 w-4 text-gold" />
-                            {project.location}
+                        {/* Content */}
+                        <div className="flex flex-col flex-1 p-6 space-y-4">
+                          <div>
+                            <h3 className="text-lg font-bold text-navy group-hover:text-gold transition-colors mb-2">
+                              {project.title}
+                            </h3>
+                            <p className="text-sm text-steel leading-relaxed">
+                              {project.description}
+                            </p>
                           </div>
-                          <div className="flex items-center gap-2 text-sm text-steel">
-                            <span className="text-xs font-semibold text-gold uppercase">Scale:</span>
-                            {project.scale}
+
+                          {/* Project details */}
+                          <div className="space-y-2 py-4 border-y border-gray-100">
+                            <div className="flex items-center gap-2 text-sm text-steel">
+                              <MapPin className="h-4 w-4 text-gold" />
+                              {project.location}
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-steel">
+                              <span className="text-xs font-semibold text-gold uppercase">Scale:</span>
+                              {project.scale}
+                            </div>
+                          </div>
+
+                          {/* Team */}
+                          <div className="flex items-start gap-2">
+                            <Users className="h-4 w-4 text-gold shrink-0 mt-0.5" />
+                            <p className="text-xs text-steel-light">{project.team}</p>
                           </div>
                         </div>
-
-                        {/* Team */}
-                        <div className="flex items-start gap-2">
-                          <Users className="h-4 w-4 text-gold shrink-0 mt-0.5" />
-                          <p className="text-xs text-steel-light">{project.team}</p>
-                        </div>
-                      </div>
-                    </article>
+                      </article>
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -70,11 +70,7 @@ const TEAM = [
 const PARTNERS = [
   {
     name: "Dee Divine Solutions",
-    desc: "Strategic partner for project management and logistics support across Nigeria.",
-  },
-  {
-    name: "Engineering Services",
-    desc: "Technical engineering consulting and structural design expertise for complex projects.",
+    desc: "Project management, logistics support, and strategic coordination across Nigeria.",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
@@ -144,31 +140,28 @@ export default function AboutPage() {
             subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
           />
 
-          <div className="grid sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {TEAM.map((member) => (
               <div
                 key={member.name}
-                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+                className="group text-center"
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative w-28 h-36 mx-auto mb-4 rounded-lg overflow-hidden border-3 border-gold/20 hover:border-gold/40 transition-all">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="112px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
-                      {member.role}
-                    </p>
-                    <h3 className="text-xl font-bold text-white">
-                      {member.name}
-                    </h3>
-                  </div>
                 </div>
-                <div className="p-6">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
+                    {member.role}
+                  </p>
+                  <h3 className="text-lg font-bold text-navy mb-2">
+                    {member.name}
+                  </h3>
                   <p className="text-sm text-steel leading-relaxed">
                     {member.bio}
                   </p>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, ArrowLeft } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
@@ -12,6 +12,19 @@ export const metadata: Metadata = {
 export default function InvincibleTechPage() {
   return (
     <>
+      {/* ═══════ BACK BUTTON ═══════ */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+          <Link
+            href="/partners"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-navy hover:text-gold transition-colors group"
+          >
+            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+            Back to Partners
+          </Link>
+        </div>
+      </section>
+
       {/* ═══════ PAGE HEADER ═══════ */}
       <section className="relative bg-navy py-20 sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark to-navy-light -z-10" />

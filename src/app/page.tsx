@@ -81,11 +81,7 @@ const STRENGTHS: { icon: LucideIcon; title: string; text: string }[] = [
 const PARTNERS = [
   {
     name: "Dee Divine Solutions",
-    desc: "Strategic partner for project management and logistics support.",
-  },
-  {
-    name: "Engineering Services",
-    desc: "Technical engineering consulting and structural design expertise.",
+    desc: "Project management, logistics support, and strategic coordination.",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
@@ -205,7 +201,8 @@ export default function HomePage() {
             subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
           />
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="flex justify-center">
+            <div className="grid sm:grid-cols-2 gap-8">
             {TEAM.map((member) => (
               <div
                 key={member.name}
@@ -233,6 +230,7 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -274,7 +272,7 @@ export default function HomePage() {
             subtitle="Together with industry leaders, we deliver comprehensive steel manufacturing and construction excellence."
           />
 
-          <div className="grid sm:grid-cols-3 gap-8 mb-8">
+          <div className="grid sm:grid-cols-2 gap-8 mb-8 max-w-2xl mx-auto">
             {PARTNERS.map((p) => (
               <Link
                 key={p.name}
