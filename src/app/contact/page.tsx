@@ -10,25 +10,31 @@ export const metadata: Metadata = {
     "Get in touch with Invinvincible Tech And Integrated Services Ltd. Request a quote, ask a question, or schedule a consultation.",
 };
 
-const CONTACT_DETAILS = [
+const PRIMARY_CONTACT_METHODS = [
   {
     icon: Phone,
-    label: "Phone",
+    label: "Call Us",
     value: "0802 868 7687",
     href: "tel:08028687687",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: Mail,
-    label: "Email",
+    label: "Email Us",
     value: "invincibletech13@gmail.com",
     href: "mailto:invincibletech13@gmail.com",
+    color: "from-emerald-500 to-emerald-600",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     value: "Message on WhatsApp",
     href: "https://wa.me/2348028687687?text=Hello%20Invinvincible%20Tech,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
+    color: "from-green-500 to-green-600",
   },
+];
+
+const CONTACT_DETAILS = [
   {
     icon: MapPin,
     label: "Location",
@@ -71,31 +77,45 @@ export default function ContactPage() {
                   Get in Touch
                 </h2>
                 <p className="text-steel leading-relaxed">
-                  Reach out via phone, email, or the contact form and our team
-                  will respond within 24 hours.
+                  Connect with us via phone, email, WhatsApp, or our contact form.
+                  We respond within 24 hours.
                 </p>
               </div>
 
-              <div className="space-y-5">
+              {/* Primary Contact Methods - Prominent Buttons */}
+              <div className="space-y-3">
+                <p className="text-xs font-semibold uppercase tracking-widest text-steel-light mb-4">
+                  Direct Contact Options
+                </p>
+                <div className="space-y-3">
+                  {PRIMARY_CONTACT_METHODS.map((method) => (
+                    <a
+                      key={method.label}
+                      href={method.href}
+                      className={`flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.color} text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200`}
+                    >
+                      <method.icon className="h-5 w-5 shrink-0" />
+                      <div>
+                        <p className="text-sm font-bold">{method.label}</p>
+                        <p className="text-xs opacity-90">{method.value}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Secondary Contact Info */}
+              <div className="space-y-4 pt-4 border-t border-gray-200">
                 {CONTACT_DETAILS.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold">
-                      <item.icon className="h-5 w-5" />
+                  <div key={item.label} className="flex items-start gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-gold/10 text-gold mt-0.5">
+                      <item.icon className="h-4 w-4" />
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-steel-light">
                         {item.label}
                       </p>
-                      {item.href ? (
-                        <a
-                          href={item.href}
-                          className="text-navy font-medium hover:text-gold transition-colors"
-                        >
-                          {item.value}
-                        </a>
-                      ) : (
-                        <p className="text-navy font-medium">{item.value}</p>
-                      )}
+                      <p className="text-navy font-medium text-sm">{item.value}</p>
                     </div>
                   </div>
                 ))}
