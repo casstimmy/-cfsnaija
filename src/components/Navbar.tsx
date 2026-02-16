@@ -33,8 +33,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
-              width={180}
-              height={180}
+              width={120}
+              height={120}
               className="h-20 w-auto"
               priority
             />
