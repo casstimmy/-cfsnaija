@@ -36,8 +36,8 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Naija Steel Manufacturing Logo"
-                width={50}
-                height={50}
+                width={20}
+                height={20}
                 className="h-20 w-auto"
               />
               <span className="text-white font-bold text-lg leading-tight">
