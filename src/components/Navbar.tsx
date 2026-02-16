@@ -35,7 +35,7 @@ export default function Navbar() {
               alt="Naija Steel Manufacturing Logo"
               width={180}
               height={180}
-              className="h-18 w-auto"
+              className="h-20 w-auto"
               priority
             />
             <span className="hidden md:block text-white font-bold text-xl leading-tight">

@@ -38,7 +38,7 @@ export default function Footer() {
                 alt="Naija Steel Manufacturing Logo"
                 width={150}
                 height={150}
-                className="h-18 w-auto"
+                className="h-20 w-auto"
               />
               <span className="text-white font-bold text-lg leading-tight">
                 Naija&nbsp;Steel
