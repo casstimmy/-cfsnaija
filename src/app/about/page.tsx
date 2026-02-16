@@ -61,7 +61,7 @@ const TEAM = [
   {
     name: "Emmanuel C. Bernard",
     role: "Chief Operating Officer (COO)",
-    image: "/team/Person2.jpg",
+    image: "/team/person2.jpg",
     bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
   },
 ];
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover object-[center_30%] group-hover:scale-125 transition-transform duration-500"
                     sizes="112px"
                   />
                 </div>

@@ -14,7 +14,7 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     slug: "dee-divine-solutions",
-    logo: "/partners/dee-divine.svg",
+    logo: "/partners/dee-divine.PNG",
     focus: "Project Management & Logistics",
     description:
       "Strategic partner specializing in comprehensive project management, supply chain optimization, and logistics coordination across Nigeria.",
@@ -30,7 +30,7 @@ const PARTNERS = [
   {
     name: "Invincible Tech & Integrated Services Ltd",
     slug: "invincible-tech",
-    logo: "/partners/invincible-tech.svg",
+    logo: "/partners/invincible-tech.jpeg",
     focus: "Construction Technology & Facility Management",
     description:
       "Building technology partner offering facility management, construction tech integration, and integrated building services.",

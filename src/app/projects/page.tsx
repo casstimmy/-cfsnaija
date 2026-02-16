@@ -16,7 +16,7 @@ interface Project {
   category: string;
   location: string;
   description: string;
-  status: "Completed" | "Ongoing" | "Upcoming";
+
   image: string;
   scale: string;
   team: string;
@@ -31,8 +31,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "50-unit high-rise residential complex with CFS framing, energy-efficient design, and modern amenities.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
     scale: "15,000 sqm",
     team: "Naija Steel + Dee Divine Solutions + Invincible Tech",
@@ -44,8 +43,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "8-story commercial building with complete CFS structural framing and integrated building systems.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     scale: "12,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -57,8 +55,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Integrated residential-retail-office development utilizing sustainable CFS construction methods.",
-    status: "Ongoing",
-    image:
+        image:
       "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80",
     scale: "25,000 sqm",
     team: "Naija Steel + All Partners",
@@ -70,8 +67,7 @@ const PROJECTS: Project[] = [
     location: "Abuja, Nigeria",
     description:
       "Premium corporate headquarters featuring CFS framing, advanced automation, and executive facilities.",
-    status: "Ongoing",
-    image:
+        image:
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&q=80",
     scale: "8,500 sqm",
     team: "Naija Steel + Invincible Tech",
@@ -85,8 +81,7 @@ const PROJECTS: Project[] = [
     location: "Port Harcourt, Nigeria",
     description:
       "Large-scale industrial structure with precision-fabricated steel members and complex geometry.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80",
     scale: "18,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -98,8 +93,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Multiple connected warehouses with optimized steel framing for logistics operations.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
     scale: "22,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -111,8 +105,7 @@ const PROJECTS: Project[] = [
     location: "Kaduna, Nigeria",
     description:
       "Custom-designed heavy industrial steel structure with advanced load-bearing capabilities.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80",
     scale: "8,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -124,8 +117,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Complex arched steel framework showcasing advanced fabrication and precision engineering.",
-    status: "Ongoing",
-    image:
+        image:
       "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=800&q=80",
     scale: "6,500 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -139,8 +131,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Complete 60-room hotel renovation including structural upgrades and integrated technology systems.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
     scale: "5,000 sqm",
     team: "All Partner Network",
@@ -152,8 +143,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Multi-block educational facility renovated with modern classrooms, labs, and administrative spaces.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
     scale: "10,000 sqm",
     team: "Naija Steel + Invincible Tech",
@@ -165,8 +155,7 @@ const PROJECTS: Project[] = [
     location: "Abuja, Nigeria",
     description:
       "Hospital facility expansion with CFS framing and advanced medical facility infrastructure.",
-    status: "Ongoing",
-    image:
+        image:
       "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=80",
     scale: "7,500 sqm",
     team: "Naija Steel + All Partners",
@@ -180,8 +169,7 @@ const PROJECTS: Project[] = [
     location: "Ogun State, Nigeria",
     description:
       "Agricultural facility with climate-controlled storage and processing areas.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80",
     scale: "4,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -193,8 +181,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Secure data center with advanced environmental controls and redundant systems.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
     scale: "3,500 sqm",
     team: "Naija Steel + Invincible Tech",
@@ -206,8 +193,7 @@ const PROJECTS: Project[] = [
     location: "Lagos, Nigeria",
     description:
       "Manufacturing facility with production floors, quality control labs, and administrative offices.",
-    status: "Ongoing",
-    image:
+        image:
       "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
     scale: "12,000 sqm",
     team: "All Partners",
@@ -219,8 +205,7 @@ const PROJECTS: Project[] = [
     location: "Lekki, Lagos",
     description:
       "Modern retail and entertainment center with integrated parking and traffic flow systems.",
-    status: "Completed",
-    image:
+        image:
       "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
     scale: "9,000 sqm",
     team: "Naija Steel + Dee Divine Solutions",
@@ -233,12 +218,6 @@ const CATEGORIES = [
   "Facility Renovation & Upgrade",
   "Specialty Structures",
 ];
-
-const STATUS_STYLES: Record<Project["status"], string> = {
-  Completed: "bg-green/10 text-green",
-  Ongoing: "bg-gold/10 text-gold-dark",
-  Upcoming: "bg-navy/10 text-navy",
-};
 
 export default function ProjectsPage() {
   return (
@@ -326,12 +305,6 @@ export default function ProjectsPage() {
                             sizes="(max-width: 640px) 100vw, 50vw"
                           />
                           <div className="absolute inset-0 bg-navy/20" />
-                          {/* Status badge */}
-                          <span
-                            className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm ${STATUS_STYLES[project.status]}`}
-                          >
-                            {project.status}
-                          </span>
                         </div>
 
                         {/* Content */}

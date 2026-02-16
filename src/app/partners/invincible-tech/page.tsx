@@ -33,7 +33,7 @@ export default function InvincibleTechPage() {
           <div className="max-w-3xl flex items-start gap-6">
             <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-xl overflow-hidden border-2 border-gold/30 shrink-0 bg-navy-dark">
               <Image
-                src="/partners/invincible-tech.svg"
+                src="/partners/invincible-tech.jpeg"
                 alt="Invincible Tech logo"
                 fill
                 className="object-cover"

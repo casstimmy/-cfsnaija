@@ -216,7 +216,7 @@ export default function HomePage() {
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover object-[center_30%] group-hover:scale-125 transition-transform duration-500"
                     sizes="128px"
                   />
                 </div>

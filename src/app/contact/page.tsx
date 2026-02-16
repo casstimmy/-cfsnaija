@@ -92,7 +92,7 @@ export default function ContactPage() {
                       href={method.href}
                       target={method.label === "WhatsApp Us" ? "_blank" : undefined}
                       rel={method.label === "WhatsApp Us" ? "noopener noreferrer" : undefined}
-                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold hover:shadow-xl ${method.shadow} transform hover:scale-[1.03] hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-200`}
+                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-95 active:shadow-md ${method.shadow} transition-all duration-150`}
                     >
                       <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/15 group-hover:bg-white/25 transition-colors shrink-0">
                         <method.icon className="h-5 w-5" />

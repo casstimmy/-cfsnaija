@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-  <rect width="200" height="200" rx="24" fill="#0a1628"/>
-  <rect x="6" y="6" width="188" height="188" rx="20" fill="none" stroke="#d4a017" stroke-width="2"/>
-  <text x="100" y="88" text-anchor="middle" font-family="Georgia, serif" font-size="56" font-weight="bold" fill="#d4a017">DD</text>
-  <text x="100" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#ffffff" letter-spacing="3">SOLUTIONS</text>
-  <line x1="55" y1="130" x2="145" y2="130" stroke="#d4a017" stroke-width="1.5" opacity="0.6"/>
-  <text x="100" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="2">DEE DIVINE</text>
-</svg>
