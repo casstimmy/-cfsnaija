@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo.jpeg"
                 alt="Invinvincible Tech Logo"
                 width={36}
                 height={36}

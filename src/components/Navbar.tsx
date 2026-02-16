@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" aria-label="Home">
             <Image
-              src="/logo.png"
+              src="/logo.jpeg"
               alt="Invinvincible Tech Logo"
               width={40}
               height={40}
