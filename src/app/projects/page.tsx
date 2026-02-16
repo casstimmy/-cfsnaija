@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Building2 } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ interface Project {
   category: string;
   description: string;
   status: "Completed" | "Ongoing" | "Upcoming";
+  image: string;
 }
 
 const PROJECTS: Project[] = [
@@ -23,6 +25,7 @@ const PROJECTS: Project[] = [
     description:
       "A 20-unit residential housing estate built entirely with cold-formed steel technology, featuring modern finishes and energy-efficient design.",
     status: "Completed",
+    image: "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Commercial Office Complex",
@@ -30,6 +33,7 @@ const PROJECTS: Project[] = [
     description:
       "Full aluminum and glass curtain-wall fabrication and installation for a 5-story commercial office building in Lagos.",
     status: "Completed",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Industrial Warehouse Facility",
@@ -37,6 +41,7 @@ const PROJECTS: Project[] = [
     description:
       "Design, fabrication, and erection of a 2,000 sqm industrial warehouse using cold-formed steel structural members.",
     status: "Completed",
+    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Hotel Renovation & Remodeling",
@@ -44,6 +49,7 @@ const PROJECTS: Project[] = [
     description:
       "Complete interior remodeling of a 60-room hotel including drywall, suspended ceilings, plumbing, and electrical upgrades.",
     status: "Completed",
+    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Smart School Complex",
@@ -51,6 +57,7 @@ const PROJECTS: Project[] = [
     description:
       "Multi-block smart school facility with CFS structure, gypsum board partitions, and modern suspended ceiling systems.",
     status: "Ongoing",
+    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Corporate Headquarters Fit-Out",
@@ -58,6 +65,7 @@ const PROJECTS: Project[] = [
     description:
       "Premium interior fit-out for a corporate headquarters featuring custom joinery, glass partitions, and decorative ceilings.",
     status: "Ongoing",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Healthcare Clinic Build-Out",
@@ -65,6 +73,7 @@ const PROJECTS: Project[] = [
     description:
       "Turn-key clinic construction including structural work, MEP systems, drywall, and medical equipment installation.",
     status: "Upcoming",
+    image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
   },
   {
     title: "Mixed-Use Development",
@@ -72,6 +81,7 @@ const PROJECTS: Project[] = [
     description:
       "A mixed-use residential and retail development utilizing sustainable CFS framing and modern facade systems.",
     status: "Upcoming",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -114,12 +124,19 @@ export default function ProjectsPage() {
                 key={project.title}
                 className="group flex flex-col bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl hover:shadow-gold/5 hover:border-gold/30 transition-all duration-300"
               >
-                {/* Thumbnail placeholder */}
-                <div className="relative aspect-[16/10] bg-gradient-to-br from-navy/90 to-navy-light flex items-center justify-center">
-                  <Building2 className="h-12 w-12 text-gold/40" />
+                {/* Thumbnail */}
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-navy/20" />
                   {/* Status badge */}
                   <span
-                    className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full ${
+                    className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm ${
                       STATUS_STYLES[project.status]
                     }`}
                   >

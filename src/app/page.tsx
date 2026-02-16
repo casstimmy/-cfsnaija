@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Building2,
   PanelTop,
@@ -85,14 +86,19 @@ export default function HomePage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left — decorative block */}
+            {/* Left — image block */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-navy to-navy-light overflow-hidden flex items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <div className="inline-flex items-center justify-center h-20 w-20 rounded-full bg-gold/20 text-gold">
-                    <Building2 className="h-10 w-10" />
-                  </div>
-                  <p className="text-white text-lg font-semibold">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
+                <Image
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80"
+                  alt="Modern construction site with steel framework"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-navy/40 flex items-end p-6">
+                  <p className="text-white text-lg font-semibold drop-shadow-lg">
                     Building the Future, Today
                   </p>
                 </div>

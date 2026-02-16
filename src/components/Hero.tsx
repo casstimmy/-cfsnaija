@@ -1,15 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-navy">
-      {/* Background pattern */}
+      {/* Background image */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy-dark" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.03]" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/3" />
+        <Image
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80"
+          alt="Construction site with steel structure"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-navy/80" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-28 sm:py-36 lg:py-44">

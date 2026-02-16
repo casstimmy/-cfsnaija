@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS: { label: string; href: string }[] = [
@@ -15,6 +16,12 @@ const NAV_LINKS: { label: string; href: string }[] = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  function isActive(href: string): boolean {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
@@ -41,7 +48,12 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-white/10 transition-colors"
+                className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  isActive(link.href)
+                    ? "text-gold bg-white/10"
+                    : "text-gray-300 hover:text-white hover:bg-white/10"
+                }`}
+                aria-current={isActive(link.href) ? "page" : undefined}
               >
                 {link.label}
               </Link>
@@ -82,7 +94,12 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-2.5 text-sm font-medium text-gray-300 rounded-md hover:text-white hover:bg-white/10 transition-colors"
+                className={`block px-4 py-2.5 text-sm font-medium rounded-md transition-colors ${
+                  isActive(link.href)
+                    ? "text-gold bg-white/10"
+                    : "text-gray-300 hover:text-white hover:bg-white/10"
+                }`}
+                aria-current={isActive(link.href) ? "page" : undefined}
               >
                 {link.label}
               </Link>
