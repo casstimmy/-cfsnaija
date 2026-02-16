@@ -31,7 +31,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3" aria-label="Home">
             <Image
-              src="/logo.PNG"
+              src="/logo.png"
               alt="Naija Steel Manufacturing Logo"
               width={40}
               height={40}

@@ -34,7 +34,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.PNG"
+                src="/logo.png"
                 alt="Naija Steel Manufacturing Logo"
                 width={36}
                 height={36}
