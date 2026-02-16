@@ -205,32 +205,29 @@ export default function HomePage() {
             subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
           />
 
-          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {TEAM.map((member) => (
               <div
                 key={member.name}
-                className="group bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl hover:border-gold/30 transition-all duration-300"
+                className="group text-center"
               >
-                <div className="relative aspect-[3/4] overflow-hidden">
+                <div className="relative w-32 h-32 mx-auto mb-5 rounded-full overflow-hidden border-4 border-gold/20 hover:border-gold/40 transition-all">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="128px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
-                      {member.role}
-                    </p>
-                    <h3 className="text-xl font-bold text-white">
-                      {member.name}
-                    </h3>
-                  </div>
                 </div>
-                <div className="p-6">
-                  <p className="text-sm text-steel leading-relaxed">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gold mb-1">
+                    {member.role}
+                  </p>
+                  <h3 className="text-lg font-bold text-navy">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-steel mt-2 leading-relaxed">
                     {member.bio}
                   </p>
                 </div>
@@ -272,29 +269,161 @@ export default function HomePage() {
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
-            tag="Collaboration"
-            title="Our Partners"
-            subtitle="We work alongside trusted partners to deliver comprehensive steel and engineering solutions."
+            tag="Strategic Collaboration"
+            title="Our Partner Network"
+            subtitle="Together with industry leaders, we deliver comprehensive steel manufacturing and construction excellence."
           />
 
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-3 gap-8 mb-8">
             {PARTNERS.map((p) => (
-              <div
+              <Link
                 key={p.name}
-                className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+                href="/partners"
+                className="group flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/40 hover:shadow-lg transition-all bg-white"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy/5 text-navy mb-4">
-                  <Handshake className="h-7 w-7" />
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-navy/5 group-hover:bg-gold/10 transition-colors mb-4">
+                  <span className="text-2xl font-bold text-navy group-hover:text-gold">
+                    {p.name.split(' ')[0].charAt(0)}{p.name.split(' ')[1]?.charAt(0)}
+                  </span>
                 </div>
-                <h3 className="font-bold text-navy mb-2">{p.name}</h3>
-                <p className="text-sm text-steel leading-relaxed">{p.desc}</p>
+                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">
+                  {p.name}
+                </h3>
+                <p className="text-sm text-steel leading-relaxed mb-4">
+                  {p.desc}
+                </p>
+                <div className="mt-auto flex items-center gap-1 text-xs font-semibold text-gold">
+                  Learn More <ArrowRight className="h-3 w-3" />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/partners"
+              className="inline-flex items-center gap-2 rounded-md border-2 border-navy px-6 py-2.5 text-sm font-semibold text-navy hover:bg-navy hover:text-white transition-colors"
+            >
+              View Our Partnership Network <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ PROCESS & QUALITY ═══════ */}
+      <section className="py-20 lg:py-28 bg-navy text-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
+            tag="Operational Excellence"
+            title="Our Process"
+            subtitle="A rigorous, client-centered methodology ensuring excellence at every stage."
+            light
+          />
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {[
+              {
+                number: "01",
+                title: "Consultation & Design",
+                description:
+                  "In-depth understanding of your vision, requirements, and constraints. Expert design feedback and technical feasibility assessment.",
+              },
+              {
+                number: "02",
+                title: "Engineering & Planning",
+                description:
+                  "Structural analysis, detailed engineering drawings, material specifications, and comprehensive project planning with timelines.",
+              },
+              {
+                number: "03",
+                title: "Fabrication & Manufacturing",
+                description:
+                  "Advanced CFS manufacturing, precision fabrication, rigorous quality testing, and on-site logistics coordination.",
+              },
+              {
+                number: "04",
+                title: "Installation & Handover",
+                description:
+                  "Professional on-site installation, final inspections, certification, training, and comprehensive maintenance support.",
+              },
+            ].map((step) => (
+              <div key={step.number} className="relative">
+                <div className="text-5xl font-bold text-gold/20 mb-3">
+                  {step.number}
+                </div>
+                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
+          <SectionHeader
+            tag="Client Success"
+            title="What Our Clients Say"
+            subtitle="Real feedback from successful projects across Nigeria."
+          />
 
-      {/* ═══════ CTA BANNER ═══════ */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Segun Adewale",
+                company: "Lagos Property Developers Ltd",
+                role: "Project Director",
+                feedback:
+                  "Naija Steel delivered our residential project on time and within budget. Their professionalism and precision fabrication exceeded our expectations.",
+                project: "50-Unit Residential Complex",
+              },
+              {
+                name: "Chioma Okafor",
+                company: "Federal Ministry of Works",
+                role: "Sr. Projects Manager",
+                feedback:
+                  "The partnership between Naija Steel, Engineering Services, and Dee Divine Solutions provided seamless project execution. Highly recommended for government contracts.",
+                project: "Commercial Office Complex",
+              },
+              {
+                name: "Ibrahim Hassan",
+                company: "Industrial Manufacturing Group",
+                role: "Operations Manager",
+                feedback:
+                  "Their steel fabrication quality is outstanding. The precision and durability of their structures ensure minimal maintenance over years of operation.",
+                project: "25,000 sqm Warehouse Facility",
+              },
+            ].map((testimonial) => (
+              <div
+                key={testimonial.name}
+                className="bg-white p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-gold text-lg">
+                      ★
+                    </span>
+                  ))}
+                </div>
+                <p className="text-steel leading-relaxed mb-6">
+                  &quot;{testimonial.feedback}&quot;
+                </p>
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="font-bold text-navy">{testimonial.name}</p>
+                  <p className="text-xs text-steel-light uppercase mb-1">
+                    {testimonial.role}
+                  </p>
+                  <p className="text-xs text-steel mb-2">{testimonial.company}</p>
+                  <p className="text-xs font-semibold text-gold">
+                    Project: {testimonial.project}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="relative isolate overflow-hidden bg-navy">
         <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy to-navy-light -z-10" />
         <div className="absolute top-0 left-1/2 w-[800px] h-[400px] -translate-x-1/2 -translate-y-1/2 bg-gold/10 rounded-full blur-3xl -z-10" />

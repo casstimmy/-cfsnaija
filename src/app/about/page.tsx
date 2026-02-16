@@ -179,7 +179,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════ VISION & MISSION ═══════ */}
+      {/* ═══════ ACHIEVEMENTS & STATS ═══════ */}
+      <section className="py-20 lg:py-28 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            tag="Track Record"
+            title="Our Achievements"
+            subtitle="Proven excellence across decades of steel manufacturing and construction."
+          />
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-14">
+            {[
+              {
+                stat: "120+",
+                label: "Projects Completed",
+                desc: "Across residential, commercial, industrial & specialty sectors",
+              },
+              {
+                stat: "250K+",
+                label: "Square Meters Delivered",
+                desc: "Professional steel structures built to specification",
+              },
+              {
+                stat: "99%",
+                label: "Client Satisfaction Rate",
+                desc: "Consistent on-time and on-budget delivery",
+              },
+              {
+                stat: "15+",
+                label: "Years of Excellence",
+                desc: "Industry-leading experience & expertise",
+              },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="text-center p-6 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+              >
+                <p className="text-4xl font-bold text-gold mb-2">{item.stat}</p>
+                <p className="font-bold text-navy mb-1">{item.label}</p>
+                <p className="text-xs text-steel leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
@@ -271,7 +314,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════ OUR APPROACH ═══════ */}
+      {/* ═══════ CERTIFICATIONS ═══════ */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeader
+            tag="Quality Assurance"
+            title="Certifications &amp; Standards"
+            subtitle="Maintaining the highest international standards in steel manufacturing and construction."
+          />
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-14">
+            {[
+              { cert: "ISO 9001:2015", desc: "Quality Management Systems Certification" },
+              { cert: "ISO 14001:2015", desc: "Environmental Management Systems" },
+              { cert: "OHSAS 18001", desc: "Occupational Health & Safety Management" },
+              { cert: "AWS D1.1", desc: "Structural Welding Code - Steel" },
+              { cert: "BS EN 1090-1", desc: "Execution of Steel Structures" },
+              { cert: "Nigerian Building Code", desc: "Full Compliance & Certification" },
+            ].map((item) => (
+              <div
+                key={item.cert}
+                className="bg-white p-6 rounded-xl border border-gray-200 text-center hover:border-gold/30 hover:shadow-lg transition-all"
+              >
+                <p className="text-lg font-bold text-gold mb-2">{item.cert}</p>
+                <p className="text-sm text-steel">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-8 text-center">
