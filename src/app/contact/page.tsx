@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import ContactForm from "@/components/ContactForm";
 
@@ -21,6 +22,12 @@ const CONTACT_DETAILS = [
     label: "Email",
     value: "invincibletech13@gmail.com",
     href: "mailto:invincibletech13@gmail.com",
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    value: "Message on WhatsApp",
+    href: "https://wa.me/2348028687687?text=Hello%20Invinvincible%20Tech,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
   },
   {
     icon: MapPin,
