@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -13,7 +14,7 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     slug: "dee-divine-solutions",
-    logo: "/partners/dee-divine.png",
+    logo: "/partners/dee-divine.svg",
     focus: "Project Management & Logistics",
     description:
       "Strategic partner specializing in comprehensive project management, supply chain optimization, and logistics coordination across Nigeria.",
@@ -29,7 +30,7 @@ const PARTNERS = [
   {
     name: "Invincible Tech & Integrated Services Ltd",
     slug: "invincible-tech",
-    logo: "/partners/invincible-tech.png",
+    logo: "/partners/invincible-tech.svg",
     focus: "Construction Technology & Facility Management",
     description:
       "Building technology partner offering facility management, construction tech integration, and integrated building services.",
@@ -81,9 +82,15 @@ export default function PartnersPage() {
                 {/* Accent bar */}
                 <div className="absolute top-0 inset-x-0 h-1 rounded-t-2xl bg-gradient-to-r from-gold to-gold-light scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
-                {/* Logo placeholder */}
-                <div className="h-16 w-16 rounded-lg bg-navy/10 mb-6 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
-                  <span className="text-sm font-bold text-navy">{partner.name.charAt(0)}</span>
+                {/* Logo */}
+                <div className="relative h-16 w-16 rounded-lg overflow-hidden mb-6 border-2 border-gray-200 group-hover:border-gold/40 transition-colors">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
                 </div>
 
                 {/* Content */}

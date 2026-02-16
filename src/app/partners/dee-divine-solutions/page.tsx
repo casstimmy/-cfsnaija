@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -29,7 +30,17 @@ export default function DeeDivineSolutionsPage() {
       <section className="relative bg-navy py-20 sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark to-navy-light -z-10" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex items-start gap-6">
+            <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-xl overflow-hidden border-2 border-gold/30 shrink-0 bg-navy-dark">
+              <Image
+                src="/partners/dee-divine.svg"
+                alt="Dee Divine Solutions logo"
+                fill
+                className="object-cover"
+                sizes="96px"
+              />
+            </div>
+            <div>
             <p className="text-sm font-semibold text-gold uppercase tracking-wider mb-4">
               Strategic Partner
             </p>
@@ -40,6 +51,7 @@ export default function DeeDivineSolutionsPage() {
               Expert project management and logistics coordination ensuring seamless
               execution of complex steel manufacturing and construction projects.
             </p>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />

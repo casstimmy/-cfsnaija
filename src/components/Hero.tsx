@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/projects/project-2.jpg"
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80"
           alt="Steel structure manufacturing"
           fill
           className="object-cover"

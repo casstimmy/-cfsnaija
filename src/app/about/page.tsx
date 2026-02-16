@@ -8,7 +8,6 @@ import {
   Users,
   ShieldCheck,
   ArrowRight,
-  Handshake,
 } from "lucide-react";
 import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
@@ -56,13 +55,13 @@ const TEAM = [
   {
     name: "Oyeleke Daniel",
     role: "Chief Executive Officer (CEO)",
-    image: "/team/ceo-daniel.jpg",
+    image: "/team/Person1.jpg",
     bio: "With over 10 years of experience in steel manufacturing, Daniel has successfully led projects that increased operational efficiency and market share.",
   },
   {
     name: "Emmanuel C. Bernard",
     role: "Chief Operating Officer (COO)",
-    image: "/team/coo-bernard.jpg",
+    image: "/team/Person2.jpg",
     bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
   },
 ];
@@ -71,10 +70,14 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     desc: "Project management, logistics support, and strategic coordination across Nigeria.",
+    logo: "/partners/dee-divine.svg",
+    slug: "dee-divine-solutions",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
     desc: "Construction technology, facility management, and integrated building services partner.",
+    logo: "/partners/invincible-tech.svg",
+    slug: "invincible-tech",
   },
 ];
 
@@ -121,7 +124,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Headquartered in Nigeria, we work alongside our trusted partners —
-                Dee Divine Solutions, Engineering Services, and Invincible Tech
+                Dee Divine Solutions and Invincible Tech
                 &amp; Integrated Services Ltd — to raise the standard of steel
                 construction through innovation, professionalism, and a relentless
                 focus on client satisfaction.
@@ -290,18 +293,26 @@ export default function AboutPage() {
             subtitle="We work alongside trusted partners to deliver comprehensive steel and engineering solutions."
           />
 
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {PARTNERS.map((p) => (
-              <div
+              <Link
                 key={p.name}
-                className="flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-lg transition-all"
+                href={`/partners/${p.slug}`}
+                className="group flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-xl transition-all duration-300"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-navy/5 text-navy mb-4">
-                  <Handshake className="h-7 w-7" />
+                <div className="relative h-20 w-20 rounded-xl overflow-hidden mb-4 border-2 border-gray-200 group-hover:border-gold/40 transition-colors">
+                  <Image
+                    src={p.logo}
+                    alt={p.name}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
                 </div>
-                <h3 className="font-bold text-navy mb-2">{p.name}</h3>
+                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">{p.name}</h3>
                 <p className="text-sm text-steel leading-relaxed">{p.desc}</p>
-              </div>
+                <span className="mt-3 text-xs font-semibold text-gold flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <ArrowRight className="h-3 w-3" /></span>
+              </Link>
             ))}
           </div>
         </div>

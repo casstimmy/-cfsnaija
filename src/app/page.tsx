@@ -83,12 +83,12 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     desc: "Project management, logistics support, and strategic coordination.",
-    image: "/partners/dee-divine.png",
+    image: "/partners/dee-divine.svg",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
     desc: "Construction technology, facility management, and integrated building services.",
-    image: "/partners/invincible-tech.png",
+    image: "/partners/invincible-tech.svg",
   },
 ];
 
@@ -97,13 +97,13 @@ const TEAM = [
   {
     name: "Oyeleke Daniel",
     role: "CEO",
-    image: "/team/ceo-daniel.jpg",
+    image: "/team/Person1.jpg",
     bio: "With over 10 years of experience in steel manufacturing, Daniel has successfully led projects that increased operational efficiency and market share.",
   },
   {
     name: "Emmanuel C. Bernard",
     role: "COO",
-    image: "/team/coo-bernard.jpg",
+    image: "/team/person2.jpg",
     bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
   },
 ];
@@ -122,7 +122,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/projects/project-3.jpg"
+                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
                   alt="Naija Steel construction site with steel framework"
                   fill
                   className="object-cover"
