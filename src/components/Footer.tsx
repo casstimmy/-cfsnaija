@@ -32,12 +32,12 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-5">
-            <Link href="/" className="inline-flex items-center gap-2.5">
+            <Link href="/" className="inline-flex items-center">
               <Image
                 src="/logo.png"
                 alt="Naija Steel Manufacturing Logo"
-                width={72}
-                height={72}
+                width={150}
+                height={150}
                 className="h-14 w-auto"
               />
               <span className="text-white font-bold text-lg leading-tight">
