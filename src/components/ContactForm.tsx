@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Send, CheckCircle2 } from "lucide-react";
 
 interface FormState {
   name: string;
@@ -151,7 +151,7 @@ export default function ContactForm() {
       {/* Submit */}
       <button
         type="submit"
-        className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3.5 text-sm font-bold text-navy hover:bg-gold-light transition-colors shadow-lg shadow-gold/20"
+        className="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gold px-6 py-3.5 text-sm font-bold text-navy hover:bg-gold-light hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg active:translate-y-0 active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-gold/40 transition-all duration-200 shadow-lg shadow-gold/20"
       >
         <Send className="h-4 w-4" />
         Send Message

@@ -41,6 +41,9 @@ const PRIMARY_CONTACT_METHODS = [
 ];
 
 export default function ContactPage() {
+  const subtleBtnEffect =
+    "hover:-translate-y-0.5 hover:brightness-105 hover:shadow-lg active:translate-y-0 active:scale-[0.99] focus-visible:ring-2 focus-visible:ring-white/60 transition-all duration-200";
+
   return (
     <>
       {/* ═══════ PAGE HEADER ═══════ */}
@@ -96,7 +99,7 @@ export default function ContactPage() {
                       href={method.href}
                       target={method.label === "WhatsApp Us" ? "_blank" : undefined}
                       rel={method.label === "WhatsApp Us" ? "noopener noreferrer" : undefined}
-                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-95 active:shadow-md ${method.shadow} transition-all duration-150 ${
+                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold ${subtleBtnEffect} ${method.shadow} ${
                         isWhatsApp
                           ? "ring-1 ring-green-200/70 hover:ring-green-100"
                           : ""
@@ -234,13 +237,13 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold text-navy hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-lg shadow-gold/20 transition-all duration-200"
+              className={`inline-flex items-center justify-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold text-navy hover:bg-gold-light shadow-gold/20 ${subtleBtnEffect}`}
             >
               View Our Projects <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/20 px-8 py-3.5 text-sm font-bold text-white hover:border-gold hover:text-gold hover:-translate-y-0.5 transition-all duration-200"
+              className={`inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/20 px-8 py-3.5 text-sm font-bold text-white hover:border-gold hover:text-gold ${subtleBtnEffect}`}
             >
               Explore Services
             </Link>
