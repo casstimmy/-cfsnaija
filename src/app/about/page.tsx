@@ -82,14 +82,20 @@ const PARTNERS = [
   {
     name: "CIG International Holdings",
     desc: "Industrial investment support, strategic procurement advisory, and project expansion partnership.",
-    logo: "/partners/cig-international-holdings.svg",
+    logo: "/partners/cig.png",
     slug: "cig-international-holdings",
   },
   {
     name: "Prima",
     desc: "Interior systems support, fit-out coordination, and finishing integration for modern developments.",
-    logo: "/partners/prima.svg",
+    logo: "/partners/PRIMA logo.png",
     slug: "prima",
+  },
+  {
+    name: "CARPE DIEM",
+    desc: "Piping and building materials partner supporting quality, durable project delivery.",
+    logo: "/partners/CARPE DIEM.jpeg",
+    slug: "carpe-diem",
   },
 ];
 

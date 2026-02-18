@@ -31,7 +31,7 @@ export default function PrimaPage() {
           <div className="max-w-3xl flex items-start gap-6">
             <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-xl overflow-hidden border-2 border-gold/30 shrink-0 bg-white">
               <Image
-                src="/partners/prima.svg"
+                src="/partners/PRIMA logo.png"
                 alt="Prima logo"
                 fill
                 className="object-contain p-2"

@@ -137,7 +137,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
                 <Image
-                  src="/projects/hero3.jpg"
+                  src="/projects/hero 2.jpg"
                   alt="Naija Steel construction site with steel framework"
                   fill
                   className="object-cover"

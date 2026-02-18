@@ -22,6 +22,9 @@ const SERVICE_LINKS = [
 const PARTNERS = [
   "Dee Divine Solutions",
   "Invincible Tech & Integrated Services Ltd",
+  "CIG International Holdings",
+  "PRIMA",
+  "CARPE DIEM",
 ];
 
 export default function Footer() {

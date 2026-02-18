@@ -5,12 +5,12 @@ import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
 export const metadata: Metadata = {
-  title: "CIG International Holdings | Partners",
+  title: "CARPE DIEM | Partners",
   description:
-    "CIG International Holdings - Industrial investment and strategic expansion partner of Naija Steel Manufacturing.",
+    "CARPE DIEM - Piping and building materials partner of Naija Steel Manufacturing.",
 };
 
-export default function CigInternationalHoldingsPage() {
+export default function CarpeDiemPage() {
   return (
     <>
       <section className="bg-white border-b border-gray-200">
@@ -31,10 +31,10 @@ export default function CigInternationalHoldingsPage() {
           <div className="max-w-3xl flex items-start gap-6">
             <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-xl overflow-hidden border-2 border-gold/30 shrink-0 bg-white">
               <Image
-                src="/partners/cig.png"
-                alt="CIG International Holdings logo"
+                src="/partners/CARPE DIEM.jpeg"
+                alt="CARPE DIEM logo"
                 fill
-                className="object-contain p-2"
+                className="object-contain p-1"
                 sizes="96px"
               />
             </div>
@@ -43,11 +43,11 @@ export default function CigInternationalHoldingsPage() {
                 Strategic Partner
               </p>
               <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
-                CIG International Holdings
+                CARPE DIEM
               </h1>
               <p className="text-lg text-gray-300">
-                Strategic investment and expansion partner supporting large-scale
-                steel infrastructure growth and long-term industrial execution.
+                Piping and building materials partner supporting reliable supply,
+                quality materials, and efficient project execution.
               </p>
             </div>
           </div>
@@ -60,24 +60,24 @@ export default function CigInternationalHoldingsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <SectionHeader
-                tag="About CIG International Holdings"
-                title="Industrial Growth & Investment Support"
+                tag="About CARPE DIEM"
+                title="Reliable Piping & Materials Support"
                 centered={false}
               />
               <p className="text-steel leading-relaxed">
-                CIG International Holdings supports growth-focused construction
-                and engineering ventures through strategic investment, expansion
-                planning, and high-value industrial collaboration. As a partner
-                in the Naija Steel ecosystem, CIG contributes to the scale-up of
-                manufacturing and project delivery capabilities.
+                CARPE DIEM contributes practical expertise in piping solutions and
+                building materials coordination. As part of Naija Steel&apos;s
+                partner network, CARPE DIEM helps projects maintain quality,
+                continuity, and schedule confidence from procurement to site
+                delivery.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Industrial investment strategy support",
-                  "Infrastructure growth advisory",
-                  "Strategic procurement planning",
-                  "Partnership and expansion structuring",
-                  "Long-term value creation initiatives",
+                  "Piping and fittings supply support",
+                  "Project-ready materials coordination",
+                  "Quality-focused specification alignment",
+                  "Reliable site delivery planning",
+                  "Continuity support for execution timelines",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check className="h-5 w-5 text-gold shrink-0 mt-0.5" />
@@ -89,10 +89,10 @@ export default function CigInternationalHoldingsPage() {
 
             <div className="bg-gray-50 rounded-2xl p-8 space-y-8">
               {[
-                { label: "Strategic Programs", value: "40+" },
-                { label: "Years of Experience", value: "15+" },
-                { label: "Regional Footprint", value: "West Africa" },
-                { label: "Partnership Focus", value: "Long-term Growth" },
+                { label: "Supported Projects", value: "50+" },
+                { label: "Years of Experience", value: "10+" },
+                { label: "Core Focus", value: "Piping Materials" },
+                { label: "Delivery Strength", value: "Reliability" },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -112,17 +112,17 @@ export default function CigInternationalHoldingsPage() {
       <section className="bg-navy py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-3xl font-extrabold text-white">
-            Explore Strategic Collaboration
+            Source Better Materials With CARPE DIEM
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Contact us to discuss how CIG International Holdings and Naija Steel
-            can drive your next high-impact project.
+            Contact us to combine precision steel execution with dependable
+            piping and materials support on your next project.
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 rounded-md bg-gold px-8 py-3.5 text-sm font-bold text-navy hover:bg-gold-light transition-colors"
           >
-            Discuss Opportunities <ArrowRight className="h-4 w-4" />
+            Start a Conversation <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </section>

@@ -46,7 +46,7 @@ const PARTNERS = [
   {
     name: "CIG International Holdings",
     slug: "cig-international-holdings",
-    logo: "/partners/cig-international-holdings.svg",
+    logo: "/partners/cig.png",
     focus: "Industrial Investment & Strategic Expansion",
     description:
       "Strategic growth partner supporting industrial expansion, procurement strategy, and long-term infrastructure investment initiatives.",
@@ -62,7 +62,7 @@ const PARTNERS = [
   {
     name: "Prima",
     slug: "prima",
-    logo: "/partners/prima.svg",
+    logo: "/partners/PRIMA logo.png",
     focus: "Interior Systems & Fit-Out Integration",
     description:
       "Execution-focused partner for interior systems, architectural fit-out integration, and finishing coordination in modern steel developments.",
@@ -74,6 +74,22 @@ const PARTNERS = [
     ],
     projects: "60+",
     experience: "9+ years",
+  },
+  {
+    name: "CARPE DIEM",
+    slug: "carpe-diem",
+    logo: "/partners/CARPE DIEM.jpeg",
+    focus: "Piping & Building Materials Supply",
+    description:
+      "Materials partner supporting steel and construction projects with quality piping products and supply reliability.",
+    services: [
+      "Piping Materials Supply",
+      "Project Material Coordination",
+      "Site Delivery Support",
+      "Specification Alignment",
+    ],
+    projects: "50+",
+    experience: "10+ years",
   },
 ];
 
