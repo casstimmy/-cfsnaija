@@ -87,14 +87,26 @@ export default function ContactPage() {
                 </p>
                 <div className="space-y-3">
                   {PRIMARY_CONTACT_METHODS.map((method) => (
+                    // Give WhatsApp CTA a stronger visual emphasis.
+                    (() => {
+                      const isWhatsApp = method.label === "WhatsApp Us";
+                      return (
                     <a
                       key={method.label}
                       href={method.href}
                       target={method.label === "WhatsApp Us" ? "_blank" : undefined}
                       rel={method.label === "WhatsApp Us" ? "noopener noreferrer" : undefined}
-                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-95 active:shadow-md ${method.shadow} transition-all duration-150`}
+                      className={`group flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r ${method.gradient} text-white font-semibold hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 active:scale-95 active:shadow-md ${method.shadow} transition-all duration-150 ${
+                        isWhatsApp
+                          ? "ring-2 ring-green-300/70 animate-pulse-glow hover:ring-green-200"
+                          : ""
+                      }`}
                     >
-                      <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/15 group-hover:bg-white/25 transition-colors shrink-0">
+                      <div
+                        className={`flex h-11 w-11 items-center justify-center rounded-lg bg-white/15 group-hover:bg-white/25 transition-colors shrink-0 ${
+                          isWhatsApp ? "animate-bounce-subtle" : ""
+                        }`}
+                      >
                         <method.icon className="h-5 w-5" />
                       </div>
                       <div className="min-w-0">
@@ -103,6 +115,8 @@ export default function ContactPage() {
                         <p className="text-xs opacity-70 mt-0.5">{method.subtext}</p>
                       </div>
                     </a>
+                      );
+                    })()
                   ))}
                 </div>
               </div>
