@@ -22,27 +22,25 @@ const RATIO_CYCLE = ["aspect-[4/3]", "aspect-[3/4]", "aspect-square", "aspect-[1
 
 async function getGalleryImages(): Promise<GalleryItem[]> {
   const galleryDir = path.join(process.cwd(), "public", "gallery");
-  let entries: Awaited<ReturnType<typeof fs.readdir>>;
-
   try {
-    entries = await fs.readdir(galleryDir, { withFileTypes: true });
+    const entries = await fs.readdir(galleryDir, { withFileTypes: true });
+
+    return entries
+      .filter((entry) => entry.isFile())
+      .map((entry) => {
+        const ext = path.extname(entry.name).toLowerCase();
+        return { entry, ext };
+      })
+      .filter(({ ext }) => IMAGE_EXTENSIONS.has(ext))
+      .map(({ entry, ext }) => ({
+        name: entry.name,
+        ext: ext.replace(".", "").toUpperCase(),
+        src: `/gallery/${encodeURIComponent(entry.name)}`,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
   } catch {
     return [];
   }
-
-  return entries
-    .filter((entry) => entry.isFile())
-    .map((entry) => {
-      const ext = path.extname(entry.name).toLowerCase();
-      return { entry, ext };
-    })
-    .filter(({ ext }) => IMAGE_EXTENSIONS.has(ext))
-    .map(({ entry, ext }) => ({
-      name: entry.name,
-      ext: ext.replace(".", "").toUpperCase(),
-      src: `/gallery/${encodeURIComponent(entry.name)}`,
-    }))
-    .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 }
 
 export default async function GalleryPage() {
