@@ -83,12 +83,22 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     desc: "Project management, logistics support, and strategic coordination.",
-    image: "/partners/dee-divine.svg",
+    image: "/partners/dee-divine.PNG",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
     desc: "Construction technology, facility management, and integrated building services.",
-    image: "/partners/invincible-tech.svg",
+    image: "/partners/invincible-tech.jpeg",
+  },
+  {
+    name: "CIG International Holdings",
+    desc: "Industrial investment support and strategic expansion partnership.",
+    image: "/partners/cig-international-holdings.svg",
+  },
+  {
+    name: "Prima",
+    desc: "Interior systems support and fit-out coordination for modern developments.",
+    image: "/partners/prima.svg",
   },
 ];
 
@@ -275,7 +285,7 @@ export default function HomePage() {
             subtitle="Together with industry leaders, we deliver comprehensive steel manufacturing and construction excellence."
           />
 
-          <div className="grid sm:grid-cols-2 gap-8 mb-8 max-w-2xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 max-w-6xl mx-auto">
             {PARTNERS.map((p) => (
               <PartnerCard key={p.name} partner={p} />
             ))}
