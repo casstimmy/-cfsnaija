@@ -15,7 +15,7 @@ import SectionHeader from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Naija Steel Manufacturing Ltd — our vision, mission, values, executive team, and approach to precision steel manufacturing.",
+    "Precision cold form steel frames manufacturing with an integrated approach to modern construction.",
 };
 
 const CORE_VALUES: { icon: typeof Target; title: string; text: string }[] = [
@@ -47,22 +47,22 @@ const CORE_VALUES: { icon: typeof Target; title: string; text: string }[] = [
   {
     icon: Eye,
     title: "Accountability",
-    text: "Taking ownership of outcomes and delivering on our promises — every project, every time.",
+    text: "Taking ownership of outcomes and delivering on our promises - every project, every time.",
   },
 ];
 
 const TEAM = [
   {
     name: "Oyeleke Daniel",
-    role: "Chief Executive Officer (CEO)",
+    role: "CHIEF EXECUTIVE OFFICER (CEO)",
     image: "/team/Person1.jpg",
     bio: "With over 10 years of experience in steel manufacturing, Daniel has successfully led projects that increased operational efficiency and market share.",
   },
   {
     name: "Emmanuel C. Bernard",
-    role: "Chief Operating Officer (COO)",
+    role: "CHIEF OPERATING OFFICER (COO)",
     image: "/team/person2.jpg",
-    bio: "An operations expert with 8 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
+    bio: "An operations expert with 10 years of experience in manufacturing operations, Bernard specializes in optimizing production workflows and implementing cost-saving strategies.",
   },
 ];
 
@@ -70,85 +70,90 @@ const PARTNERS = [
   {
     name: "Dee Divine Solutions",
     desc: "Project management, logistics support, and strategic coordination across Nigeria.",
-    logo: "/partners/dee-divine.svg",
+    logo: "/partners/dee-divine.PNG",
     slug: "dee-divine-solutions",
   },
   {
     name: "Invincible Tech & Integrated Services Ltd",
     desc: "Construction technology, facility management, and integrated building services partner.",
-    logo: "/partners/invincible-tech.svg",
+    logo: "/partners/invincible-tech.jpeg",
     slug: "invincible-tech",
+  },
+  {
+    name: "CIG International Holdings",
+    desc: "Industrial investment support, strategic procurement advisory, and project expansion partnership.",
+    logo: "/partners/cig-international-holdings.svg",
+    slug: "cig-international-holdings",
+  },
+  {
+    name: "Prima",
+    desc: "Interior systems support, fit-out coordination, and finishing integration for modern developments.",
+    logo: "/partners/prima.svg",
+    slug: "prima",
   },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* ═══════ PAGE HEADER ═══════ */}
       <section className="relative bg-navy py-20 sm:py-28">
         <div className="absolute inset-0 bg-gradient-to-br from-navy-dark to-navy-light -z-10" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             About Us
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Precision steel manufacturing with an integrated approach to modern construction.
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Precision cold form steel frames manufacturing with an integrated
+            approach to modern construction.
           </p>
         </div>
         <div className="absolute bottom-0 inset-x-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold" />
       </section>
 
-      {/* ═══════ COMPANY OVERVIEW ═══════ */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-6 text-center">
-            <SectionHeader
-              tag="Our Story"
-              title="Company Overview"
-            />
+            <SectionHeader tag="OUR STORY" title="Company Overview" />
             <div className="text-steel leading-relaxed space-y-4 text-left">
               <p>
-                Naija Steel Manufacturing Ltd is a leading steel manufacturing
-                and construction company dedicated to delivering precision-engineered
-                steel solutions for Nigeria and beyond. Founded with a vision to
-                modernize the construction landscape, we specialize in cold-formed
-                steel (CFS) fabrication, structural steel manufacturing, and a
+                CFS Naija Steel Manufacturing Ltd is a leading steel
+                manufacturing and construction company dedicated to delivering
+                precision-engineered Cold Form Steel solutions for Nigeria and
+                beyond. Founded with a vision to modernize the construction
+                landscape, we specialize in cold-formed steel (CFS) Frames
+                manufacturing, structural steel manufacturing, and a
                 comprehensive range of construction and engineering services.
               </p>
               <p>
                 Our team combines deep industry expertise with cutting-edge
                 manufacturing technology to serve clients across residential,
                 commercial, and industrial sectors. We take pride in our ability
-                to handle projects from concept to completion — ensuring quality,
+                to handle projects from concept to completion - ensuring quality,
                 efficiency, and value at every stage.
               </p>
               <p>
-                Headquartered in Nigeria, we work alongside our trusted partners —
-                Dee Divine Solutions and Invincible Tech
-                &amp; Integrated Services Ltd — to raise the standard of steel
-                construction through innovation, professionalism, and a relentless
-                focus on client satisfaction.
+                Headquartered in Nigeria, we work alongside our trusted partners
+                - Dee Divine Solutions and Invincible Tech &amp; Integrated
+                Services Ltd - to raise the standard of steel construction
+                through innovation, professionalism, and a relentless focus on
+                client satisfaction.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ EXECUTIVE TEAM ═══════ */}
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
-            tag="Leadership"
+            tag="LEADERSHIP"
             title="Executive Team"
             subtitle="The experienced leaders driving Naija Steel's vision of excellence in steel manufacturing."
           />
 
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {TEAM.map((member) => (
-              <div
-                key={member.name}
-                className="group text-center"
-              >
+              <div key={member.name} className="group text-center">
                 <div className="relative w-28 h-36 mx-auto mb-4 rounded-lg overflow-hidden border-3 border-gold/20 hover:border-gold/40 transition-all">
                   <Image
                     src={member.image}
@@ -175,11 +180,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════ ACHIEVEMENTS & STATS ═══════ */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            tag="Track Record"
+            tag="TRACK RECORD"
             title="Our Achievements"
             subtitle="Proven excellence across decades of steel manufacturing and construction."
           />
@@ -219,10 +223,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10">
-            {/* Vision */}
             <div className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/10 text-gold">
@@ -231,14 +235,13 @@ export default function AboutPage() {
                 <h3 className="text-xl font-bold text-navy">Our Vision</h3>
               </div>
               <p className="text-steel leading-relaxed">
-                To be the leading steel manufacturing and construction company
-                in Africa, recognized for innovation, precision engineering,
-                and excellence in delivering world-class steel infrastructure
-                and building solutions.
+                To be the leading cold form steel manufacturing and construction
+                company in Africa, recognized for innovation, precision
+                engineering, and excellence in delivering world-class steel
+                infrastructure and building solutions.
               </p>
             </div>
 
-            {/* Mission */}
             <div className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gold/10 text-gold">
@@ -250,19 +253,18 @@ export default function AboutPage() {
                 To deliver precision-engineered, sustainable, and cost-effective
                 steel manufacturing solutions through advanced cold-formed steel
                 technology, skilled craftsmanship, and a commitment to client
-                satisfaction — transforming the way structures are built across
-                Nigeria.
+                satisfaction - transforming the way structures are built across
+                Nigeria and West Africa at large.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══════ CORE VALUES ═══════ */}
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
-            tag="What Drives Us"
+            tag="WHAT DRIVES US"
             title="Core Values"
             subtitle="The principles that guide every decision, every project, and every relationship."
           />
@@ -284,57 +286,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════ OUR PARTNERS ═══════ */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
-            tag="Collaboration"
+            tag="COLLABORATION"
             title="Our Partners"
             subtitle="We work alongside trusted partners to deliver comprehensive steel and engineering solutions."
           />
 
-          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {PARTNERS.map((p) => (
               <Link
                 key={p.name}
                 href={`/partners/${p.slug}`}
                 className="group flex flex-col items-center text-center p-8 rounded-xl border border-gray-200 hover:border-gold/30 hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative h-20 w-20 rounded-xl overflow-hidden mb-4 border-2 border-gray-200 group-hover:border-gold/40 transition-colors">
+                <div className="relative h-20 w-20 rounded-xl overflow-hidden mb-4 border-2 border-gray-200 group-hover:border-gold/40 transition-colors bg-white">
                   <Image
                     src={p.logo}
                     alt={p.name}
                     fill
-                    className="object-cover"
+                    className="object-contain p-1"
                     sizes="80px"
                   />
                 </div>
-                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">{p.name}</h3>
+                <h3 className="font-bold text-navy mb-2 group-hover:text-gold transition-colors">
+                  {p.name}
+                </h3>
                 <p className="text-sm text-steel leading-relaxed">{p.desc}</p>
-                <span className="mt-3 text-xs font-semibold text-gold flex items-center gap-1 group-hover:gap-2 transition-all">Learn More <ArrowRight className="h-3 w-3" /></span>
+                <span className="mt-3 text-xs font-semibold text-gold flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn More <ArrowRight className="h-3 w-3" />
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════ CERTIFICATIONS ═══════ */}
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            tag="Quality Assurance"
+            tag="QUALITY ASSURANCE"
             title="Certifications &amp; Standards"
             subtitle="Maintaining the highest international standards in steel manufacturing and construction."
           />
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-14">
             {[
-              { cert: "ISO 9001:2015", desc: "Quality Management Systems Certification" },
-              { cert: "ISO 14001:2015", desc: "Environmental Management Systems" },
-              { cert: "OHSAS 18001", desc: "Occupational Health & Safety Management" },
+              {
+                cert: "ISO 9001:2015",
+                desc: "Quality Management Systems Certification",
+              },
+              {
+                cert: "ISO 14001:2015",
+                desc: "Environmental Management Systems",
+              },
+              {
+                cert: "OHSAS 18001",
+                desc: "Occupational Health & Safety Management",
+              },
               { cert: "AWS D1.1", desc: "Structural Welding Code - Steel" },
               { cert: "BS EN 1090-1", desc: "Execution of Steel Structures" },
-              { cert: "Nigerian Building Code", desc: "Full Compliance & Certification" },
+              {
+                cert: "Nigerian Building Code",
+                desc: "Full Compliance & Certification",
+              },
             ].map((item) => (
               <div
                 key={item.cert}
@@ -347,11 +363,12 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto space-y-8 text-center">
             <SectionHeader
-              tag="How We Work"
+              tag="HOW WE WORK"
               title="Our Approach"
               subtitle="A systematic, client-centered methodology that ensures every project exceeds expectations."
             />
@@ -361,7 +378,7 @@ export default function AboutPage() {
                 {
                   step: "01",
                   title: "Consult & Plan",
-                  text: "We start by understanding your vision, requirements, and constraints — then develop a tailored project plan.",
+                  text: "We start by understanding your vision, requirements, and constraints - then develop a tailored project plan.",
                 },
                 {
                   step: "02",
@@ -395,14 +412,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══════ CTA ═══════ */}
       <section className="bg-navy py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-3xl font-extrabold text-white">
             Ready to Work With Us?
           </h2>
           <p className="text-gray-300 max-w-xl mx-auto">
-            Let&rsquo;s discuss your next project and how our precision steel
+            Let&apos;s discuss your next project and how our precision steel
             manufacturing can deliver exceptional results.
           </p>
           <Link

@@ -43,6 +43,38 @@ const PARTNERS = [
     projects: "80+",
     experience: "10+ years",
   },
+  {
+    name: "CIG International Holdings",
+    slug: "cig-international-holdings",
+    logo: "/partners/cig-international-holdings.svg",
+    focus: "Industrial Investment & Strategic Expansion",
+    description:
+      "Strategic growth partner supporting industrial expansion, procurement strategy, and long-term infrastructure investment initiatives.",
+    services: [
+      "Investment Advisory",
+      "Industrial Expansion Strategy",
+      "Strategic Procurement",
+      "Partnership Structuring",
+    ],
+    projects: "40+",
+    experience: "15+ years",
+  },
+  {
+    name: "Prima",
+    slug: "prima",
+    logo: "/partners/prima.svg",
+    focus: "Interior Systems & Fit-Out Integration",
+    description:
+      "Execution-focused partner for interior systems, architectural fit-out integration, and finishing coordination in modern steel developments.",
+    services: [
+      "Interior Systems Planning",
+      "Fit-Out Integration",
+      "Finishing Coordination",
+      "Specification Support",
+    ],
+    projects: "60+",
+    experience: "9+ years",
+  },
 ];
 
 export default function PartnersPage() {

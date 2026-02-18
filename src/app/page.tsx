@@ -142,8 +142,8 @@ export default function HomePage() {
             {/* Right — copy */}
             <div className="space-y-6">
               <SectionHeader
-                tag="Who We Are"
-                title="Nigeria's Trusted Steel Manufacturer"
+                tag="WHO WE ARE"
+                title="Nigeria's Trusted Cold Form Steel Frames Manufacturer"
                 centered={false}
               />
               <p className="text-steel leading-relaxed">
