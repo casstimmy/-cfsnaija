@@ -93,12 +93,17 @@ const PARTNERS = [
   {
     name: "CIG International Holdings",
     desc: "Industrial investment support and strategic expansion partnership.",
-    image: "/partners/cig-international-holdings.svg",
+    image: "/partners/cig.png",
   },
   {
-    name: "Prima",
+    name: "PRIMA",
     desc: "Interior systems support and fit-out coordination for modern developments.",
-    image: "/partners/prima.svg",
+    image: "/partners/PRIMA logo.png",
+  },
+  {
+    name: "CARPE DIEM",
+    desc: "Piping and building materials partner supporting quality project delivery.",
+    image: "/partners/CARPE DIEM.jpeg",
   },
 ];
 
@@ -157,7 +162,7 @@ export default function HomePage() {
                 centered={false}
               />
               <p className="text-steel leading-relaxed">
-                Naija Steel Manufacturing Ltd is a leading steel manufacturing
+                CFS Naija steel Manufacturing Ltd is a leading steel manufacturing
                 and construction company specializing in cold-formed steel (CFS)
                 solutions. From precision fabrication to full-scale building
                 construction, we deliver projects that stand the test of time —
@@ -417,7 +422,16 @@ export default function HomePage() {
         </div>
       </section>
       <section className="relative isolate overflow-hidden bg-navy">
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy to-navy-light -z-10" />
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/projects/hero1.JPG"
+            alt="Steel construction project"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/85 via-navy/80 to-navy-light/85" />
+        </div>
         <div className="absolute top-0 left-1/2 w-[800px] h-[400px] -translate-x-1/2 -translate-y-1/2 bg-gold/10 rounded-full blur-3xl -z-10" />
 
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 text-center space-y-6">
@@ -425,7 +439,7 @@ export default function HomePage() {
             Let&rsquo;s Build Your Vision in Steel
           </h2>
           <p className="text-lg text-gray-300 max-w-xl mx-auto">
-            Partner with Naija Steel Manufacturing Ltd to transform your
+            Partner with CFS Naija steel Manufacturing Ltd to transform your
             construction and engineering projects. Get in touch today for a
             free consultation and quote.
           </p>

@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Naija Steel Manufacturing Ltd. Request a quote, ask a question, or schedule a consultation.",
+    "Get in touch with CFS Naija steel Manufacturing Ltd. Request a quote, ask a question, or schedule a consultation.",
 };
 
 const PRIMARY_CONTACT_METHODS = [
@@ -167,7 +167,7 @@ export default function ContactPage() {
                   <Building2 className="h-5 w-5 text-gold shrink-0" />
                   <div>
                     <p className="text-sm font-bold text-navy">
-                      Naija Steel Manufacturing Ltd
+                      CFS Naija steel Manufacturing Ltd
                     </p>
                     <p className="text-xs text-steel mt-0.5">
                       Precision Steel. Built to Last.

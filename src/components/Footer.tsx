@@ -131,7 +131,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
           <p>
-            &copy; 2026 Naija Steel Manufacturing Ltd. All Rights Reserved.
+            &copy; 2026 CFS Naija steel Manufacturing Ltd. All Rights Reserved.
           </p>
           <p className="text-gray-500">
             Precision steel&nbsp;&bull;&nbsp;Built to last

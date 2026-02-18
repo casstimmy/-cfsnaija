@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Naija Steel Manufacturing Ltd",
+    default: "CFS Naija steel Manufacturing Ltd",
     template: "%s | Naija Steel",
   },
   description:
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "steel building",
     "Naija Steel",
   ],
-  authors: [{ name: "Naija Steel Manufacturing Ltd" }],
+  authors: [{ name: "CFS Naija steel Manufacturing Ltd" }],
   openGraph: {
-    title: "Naija Steel Manufacturing Ltd",
+    title: "CFS Naija steel Manufacturing Ltd",
     description:
       "Nigeria's trusted steel manufacturing company — precision steel fabrication and CFS construction.",
     type: "website",

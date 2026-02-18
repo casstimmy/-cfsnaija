@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&q=80"
+          src="/projects/hero3.jpg"
           alt="Steel structure manufacturing"
           fill
           className="object-cover"
@@ -34,7 +34,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl">
-            Naija Steel Manufacturing Ltd delivers world-class cold-formed steel
+            CFS Naija steel Manufacturing Ltd delivers world-class cold-formed steel
             fabrication, CFS construction, and integrated engineering solutions —
             built with precision, delivered on time.
           </p>

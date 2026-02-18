@@ -7,7 +7,7 @@ import SectionHeader from "@/components/SectionHeader";
 export const metadata: Metadata = {
   title: "Dee Divine Solutions | Partners",
   description:
-    "Dee Divine Solutions - Strategic project management and logistics partner of Naija Steel Manufacturing Ltd.",
+    "Dee Divine Solutions - Strategic project management and logistics partner of CFS Naija steel Manufacturing Ltd.",
 };
 
 export default function DeeDivineSolutionsPage() {
