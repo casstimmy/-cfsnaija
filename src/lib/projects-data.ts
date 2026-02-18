@@ -1,4 +1,4 @@
-﻿export interface ProjectData {
+export interface ProjectData {
   id: string;
   title: string;
   client: string;
@@ -12,13 +12,35 @@
   status: "Completed" | "Ongoing" | "Upcoming";
 }
 
-function buildProjectImages(projectNumber: number, count = 4): string[] {
-  const serial = String(projectNumber).padStart(2, "0");
-  return Array.from({ length: count }, (_, index) => {
-    const shot = String(index).padStart(2, "0");
-    return `/projects/project-image${serial}-${shot}.jpg`;
-  });
-}
+const PROJECT_IMAGE_SETS = {
+  marriottIkeja: [
+    "/projects/Marriott Hotels Ikeja 1.PNG",
+    "/projects/Marriott Hotels Ikeja 2.PNG",
+    "/projects/Marriott Hotels Ikeja 3.PNG",
+  ],
+  millenniumTower: [
+    "/projects/Millennium Tower project.jpeg",
+    "/projects/Millennium Tower project 1.jpeg",
+    "/projects/Millennium Tower project 2.jpeg",
+    "/projects/Millennium Tower project 3.jpeg",
+  ],
+  mixedDevelopments: [
+    "/projects/Mixed developments Ogun state.jpeg",
+    "/projects/Mixed developments Ogun state 1.jpeg",
+  ],
+  bananaIslandResidence: [
+    "/projects/Banana Island Residence.PNG",
+    "/projects/Banana Island Residence 1.jpeg",
+    "/projects/Banana Island Residence 2.jpeg",
+    "/projects/Banana Island Residence 3.PNG",
+    "/projects/Banana Island Residence 4.PNG",
+    "/projects/Banana Island Residence 5.jpeg",
+  ],
+  privateResidence: [
+    "/projects/Private Residence 1.jpeg",
+    "/projects/Private Residence 2.jpeg",
+  ],
+} as const;
 
 export const PROJECTS: ProjectData[] = [
   {
@@ -30,8 +52,8 @@ export const PROJECTS: ProjectData[] = [
       "Our team successfully remodeled executive lounges at Marriott Hotel using advanced steel frame and steel profile systems.",
     fullDescription:
       "Our team successfully remodeled executive lounges at the Marriott Hotel utilizing advanced steel frame and steel profile systems, ensuring structural integrity, speed of construction, and adherence to international standards. This landmark project showcases our expertise in innovative construction solutions for high-end hospitality infrastructure.",
-    image: buildProjectImages(1)[0],
-    galleryImages: buildProjectImages(1),
+    image: PROJECT_IMAGE_SETS.marriottIkeja[0],
+    galleryImages: [...PROJECT_IMAGE_SETS.marriottIkeja],
     scopeOfWork: [
       "Executive lounge remodeling",
       "Steel frame system supply and installation",
@@ -55,8 +77,8 @@ export const PROJECTS: ProjectData[] = [
       "Our team utilized steel stud framing systems for drywall and plasterboard ceiling installations in this upscale project.",
     fullDescription:
       "Our team utilized steel stud framing systems for drywall and plasterboard ceiling installations, ensuring precision, stability, and a flawless finish in this upscale project.",
-    image: buildProjectImages(2)[0],
-    galleryImages: buildProjectImages(2),
+    image: PROJECT_IMAGE_SETS.millenniumTower[0],
+    galleryImages: [...PROJECT_IMAGE_SETS.millenniumTower],
     scopeOfWork: [
       "Remodeling coordination",
       "Steel stud framing installation",
@@ -80,8 +102,8 @@ export const PROJECTS: ProjectData[] = [
       "This 7-story steel structure project used steel deck and profile systems with steel framing for partitions, ceilings, and roof construction.",
     fullDescription:
       "This project features a 7-story steel structure utilizing steel deck and profile systems for enhanced structural performance. Steel framing was employed for wall partitions, ceilings, and roof construction, ensuring speed, stability, and architectural flexibility.",
-    image: buildProjectImages(3)[0],
-    galleryImages: buildProjectImages(3),
+    image: PROJECT_IMAGE_SETS.mixedDevelopments[0],
+    galleryImages: [...PROJECT_IMAGE_SETS.mixedDevelopments],
     scopeOfWork: [
       "7-story structural steel execution",
       "Steel deck and profile system installation",
@@ -105,8 +127,8 @@ export const PROJECTS: ProjectData[] = [
       "High-performance cold-formed steel roof system with supplied and installed CFS/LGS profiles and omega sections.",
     fullDescription:
       "This project features a high-performance cold-formed steel (CFS) roof system. Our team supplied and installed CFS/LGS profiles and omega sections, expertly assembled to deliver a durable and efficient roofing solution tailored to the project's unique requirements.",
-    image: buildProjectImages(4)[0],
-    galleryImages: buildProjectImages(4),
+    image: PROJECT_IMAGE_SETS.bananaIslandResidence[0],
+    galleryImages: [...PROJECT_IMAGE_SETS.bananaIslandResidence],
     scopeOfWork: [
       "Roof system design support",
       "CFS/LGS profile supply",
@@ -130,8 +152,8 @@ export const PROJECTS: ProjectData[] = [
       "Supply and installation of non-load-bearing steel framing systems for interior partitions to optimize space and efficiency.",
     fullDescription:
       "Our team supplied and installed non-load-bearing steel framing systems for interior partitions, optimizing space and efficiency. This application highlights the versatility and practicality of steel frame solutions for residential enhancements.",
-    image: buildProjectImages(5)[0],
-    galleryImages: buildProjectImages(5),
+    image: PROJECT_IMAGE_SETS.privateResidence[0],
+    galleryImages: [...PROJECT_IMAGE_SETS.privateResidence],
     scopeOfWork: [
       "Interior partition planning",
       "Non-load-bearing framing supply",

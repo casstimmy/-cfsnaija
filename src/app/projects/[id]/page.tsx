@@ -149,10 +149,6 @@ export default async function ProjectDetailPage({
 
               <div className="space-y-4">
                 <h3 className="text-xl font-bold text-navy">Project Gallery</h3>
-                <p className="text-xs text-steel-light">
-                  Image naming pattern: project-imageXX-YY (for example,
-                  project-image01-00, project-image01-01, project-image01-02).
-                </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {project.galleryImages.map((img, index) => (
                     <div
