@@ -122,7 +122,7 @@ export default function AboutPage() {
             <SectionHeader tag="OUR STORY" title="Company Overview" />
             <div className="text-steel leading-relaxed space-y-4 text-left">
               <p>
-                CFS CFS Naija steel Manufacturing Ltd is a leading steel
+                CFS Naija steel Manufacturing Ltd is a leading steel
                 manufacturing and construction company dedicated to delivering
                 precision-engineered Cold Form Steel solutions for Nigeria and
                 beyond. Founded with a vision to modernize the construction

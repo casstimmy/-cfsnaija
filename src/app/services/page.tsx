@@ -186,7 +186,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14">
           <SectionHeader
             tag="WHAT WE OFFER"
-            title="CFSCFS Naija steel Manufacturing Ltd."
+            title="CFS Naija steel Manufacturing Ltd."
             subtitle="End-to-End Engineering Solutions"
           />
 

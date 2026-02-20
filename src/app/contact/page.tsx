@@ -34,7 +34,7 @@ const PRIMARY_CONTACT_METHODS = [
     label: "WhatsApp Us",
     value: "Chat on WhatsApp",
     subtext: "Get instant support and quick project estimates",
-    href: "https://wa.me/2348028687687?text=Hello%20Naija%20Steel%20Manufacturing,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
+    href: "https://wa.me/2348028687687?text=Hello%20CFS%20Naija%20Steel%20Manufacturing,%20I%20would%20like%20to%20inquire%20about%20your%20services.",
     gradient: "from-green-500 to-green-600",
     shadow: "shadow-green-500/20",
   },
